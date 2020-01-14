@@ -17,9 +17,10 @@ public class PrivetController {
    private PrivetRepo privetRepo;
 
     @PostMapping("filter_privet")
-    public String filter_privet(@RequestParam String filter_privet, Map<String, Object> model) {
+    public String filter_privet(@RequestParam String filter_privet,
+                                Map<String, Object> model) {
        Iterable <Privet> privet;
-        if (filter_privet !=null && !filter_privet.isEmpty()){
+        if (filter_privet !=null && !filter_privet.isEmpty() ){
             privet = privetRepo.findByAuthorIgnoreCaseContaining(filter_privet);
         } else {
             privet = privetRepo.findAll();
