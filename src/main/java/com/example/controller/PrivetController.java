@@ -4,6 +4,7 @@ import com.example.domain.Privet;
 import com.example.model.PrivetRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -28,5 +29,12 @@ public class PrivetController {
         model.put("privet", privet);
 
         return "privet";
+    }
+
+    @GetMapping("/filter_privet")
+    public String filter_privet (Map<String, Object> model) {
+        Iterable <Privet> privet = privetRepo.findAll();
+        model.put("privet", privet);
+        return "redirect:/privet";
     }
 }

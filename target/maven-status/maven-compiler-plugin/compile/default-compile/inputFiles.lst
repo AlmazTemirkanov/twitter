@@ -5,11 +5,14 @@ C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\model\PrivetRepo.j
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\config\MvcConfig.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\model\PrepaidRepo.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\config\WebSecurityConfig.java
+C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\controller\ContentController.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\model\MessageRepo.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\domain\Postpaid.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\controller\PrivetController.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\domain\Privet.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\controller\MainController.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\controller\PostpaidController.java
+C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\model\ContentRepo.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\Application.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\controller\PrepaidController.java
+C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\domain\Content.java
