@@ -133,6 +133,11 @@ public class MainController {
         return "content";
     }
 
+    @GetMapping("/vip")
+    public String vip(Map<String, Object> model) {
+        return "vip";
+    }
+
 
 //    @ResponseStatus(HttpStatus.NOT_FOUND)
 //    public class NotFoundException extends RuntimeException {

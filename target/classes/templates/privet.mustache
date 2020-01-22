@@ -35,6 +35,9 @@
                 <a class="nav-link ml-4" href="/content">Контент провайдеры</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link ml-4" href="/vip">Проверка номеров</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link ml-4" href="/privet">Привет+</a>
             </li>
             <li class="nav-item dropdown">
@@ -55,15 +58,16 @@
     </div>
 </nav>
 
-<div class="container mt-5">
-<span class="navbar-text ml-2 pt-5">
-    Поиск по исполнителям
-  </span>
+<div class="container mt-5 pt-5">
+
 
     <form class="form-inline" method="post" action="/filter_privet">
-        <input class="form-control ml-2" type="text" name="filter_privet" >
-        <input type="hidden" name="_csrf" value="{{_csrf.token}}">
-        <button type="submit" class="btn btn-outline-dark ml-2">Найти</button>
+
+        <div class="container mt-2">
+            <input class="form-control ml-2" type="text" name="filter_privet" >
+            <input type="hidden" name="_csrf" value="{{_csrf.token}}">
+            <button type="submit" class="btn btn-outline-dark ml-2">Найти</button>
+        </div>
 
     </form>
 
@@ -99,7 +103,7 @@
 <footer>
     <div class="navbar ">
         <div class="navbar-light bg-light fixed-bottom">
-            <span class="navbar-brand mb-3	"></span>
+            <span class="navbar-brand mb-3  "></span>
             <p class="text-center">Beeline © 2020</p>
         </div>
     </div>

@@ -66,10 +66,8 @@ public class ContentController {
         return "content_admin";
     }
 
-    @GetMapping("/content_admin")
-    public String content_admin (Map<String, Object> model) {
-        Iterable <Content> content = contentRepo.findAll();
-        model.put("content", content);
+    @GetMapping ("/content_admin")
+    public String content_admin (Model model){
         return "content_admin";
     }
 
