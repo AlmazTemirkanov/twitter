@@ -32,10 +32,19 @@
                 <a class="nav-link ml-4" href="/">Главная</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link ml-4" href="/map">Карта</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link ml-4" href="/content">Контент провайдеры</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link ml-4" href="/vip">Проверка номеров</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ml-4" href="/sms">SMS-рассылки</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ml-4" href="/pull">Все пулы</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link ml-4" href="/privet">Привет+</a>
@@ -51,22 +60,21 @@
                 </div>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="/admin">Авторизация</a>
-            </li>
         </ul>
     </div>
 </nav>
 
 <div class="container mt-5 pt-5">
 
-
+<span class="navbar-text ml-3">
+    Поиск исполнителям
+  </span>
     <form class="form-inline" method="post" action="/filter_privet">
 
         <div class="container mt-2">
             <input class="form-control ml-2" type="text" name="filter_privet" >
             <input type="hidden" name="_csrf" value="{{_csrf.token}}">
-            <button type="submit" class="btn btn-outline-dark ml-2">Найти</button>
+            <button type="submit" class="btn btn-outline-dark">Найти</button>
         </div>
 
     </form>

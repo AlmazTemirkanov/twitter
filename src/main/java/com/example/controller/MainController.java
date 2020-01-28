@@ -18,15 +18,24 @@ public class MainController {
     public String main(Model model){
         return "main";
     }
+    @GetMapping("/map")
+    public String map (Map<String, Object> model) {
+        return "map";
+    }
 
     @GetMapping("/filter")
     public String filter(Map<String, Object> model) {
-        return "redirect:/";
+        return "redirect:/map";
     }
 
     @GetMapping("/filterAd")
     public String filterAd(Map<String, Object> model) {
         return "redirect:/admin";
+    }
+
+    @GetMapping ("/calc")
+    public String calc(Model model){
+        return "calc";
     }
 
 
@@ -39,7 +48,7 @@ public class MainController {
             messages = messageRepo.findAll();
         }
     model.put("messages", messages);
-    return "main";
+    return "map";
 }
 
     @PostMapping ("filterAd")
@@ -51,20 +60,20 @@ public class MainController {
            messages = messageRepo.findAll();
        }
         model.put("messages", messages);
-        return "admin";
+        return "map_admin";
     }
 
     @GetMapping("/delete/{id}")
     public String delete(@PathVariable Integer id, Map<String, Object> model) {
         messageRepo.deleteById(id);
-        return "redirect:/admin";
+        return "redirect:/map_admin";
     }
 
-    @GetMapping("/admin")
+    @GetMapping("/map_admin")
     public String admin (Map<String, Object> model) {
         Iterable <Message> messages = messageRepo.findAll();
         model.put("message",messages);
-        return "admin";
+        return "map_admin";
     }
 
 
@@ -84,7 +93,7 @@ public class MainController {
                        Model model){
         Message message = new Message(area, district, region, selo, voice, WCDMA, LTE);
         messageRepo.save(message);
-        return "admin";
+        return "map_admin";
     }
 
     @GetMapping("/edit/{id}")
@@ -109,7 +118,7 @@ public class MainController {
         messageRepo.findAllById(id);
         messageRepo.save(message);
 
-        return "admin";
+        return "map_admin";
     }
 
     @GetMapping("/prepaid")
@@ -138,6 +147,16 @@ public class MainController {
         return "vip";
     }
 
+
+    @GetMapping("/sms")
+    public String sms(Map<String, Object> model) {
+        return "sms";
+    }
+
+    @GetMapping("/pull")
+    public String pull (Map<String, Object> model) {
+        return "pull";
+    }
 
 //    @ResponseStatus(HttpStatus.NOT_FOUND)
 //    public class NotFoundException extends RuntimeException {
