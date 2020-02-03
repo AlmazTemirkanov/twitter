@@ -2,10 +2,12 @@ package com.example.domain;
 
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 public class Pull {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private Integer number;
     private String topic;

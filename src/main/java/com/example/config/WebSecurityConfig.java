@@ -19,16 +19,19 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/", "/main", "/filter", "/prepaid", "/postpaid",
                                         "/filter_postpaid", "/filter_prepaid", "/privet",
-                                        "/sms", "/filter_sms", "/filter_pull", "/pull", "/map", "/calc", "/css/style.css", "/js/main.min.js",
+                                        "/sms", "/filter_sms", "/filter_pull", "/filter_crmpost", "/crmpost",
+                        "/pull", "/map", "/crm", "/filter_crm","/calc", "/css/style.css", "/js/main.min.js",
                         "/img/theme-4.jpg",
                         "/img/font-1.jpg",
                         "/img/psd-1.jpg",
                         "/img/psd-2.jpg",
                         "/img/psd-3.jpg",
                         "/img/ai-1.jpg",
+                        "/img/ai-2.jpg",
                         "/img/theme-2.jpg",
                         "img/psd-3.jpg",
                         "/img/font-2.jpg",
+                        "/img/font-3.jpg",
                         "/img/icon-font.svg",
                         "/img/icon-themes.svg",
                         "/img/icon-psd.svg",
@@ -38,7 +41,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         "/img/next.svg",
                         "/img/prev.svg",
 
-                                        "/filter_privet", "/content", "/filter_content", "/vip").permitAll()
+                                        "/filter_privet", "/filter_title", "/content", "/filter_content", "/vip").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
@@ -64,7 +67,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         .password("admin13edcVFR$")
                         .roles("USER2")
                         .build();
+        UserDetails user3 =
+                User.withDefaultPasswordEncoder()
+                        .username("elaman")
+                        .password("elaman4rfvBGT%")
+                        .roles("USER2")
+                        .build();
 
-        return new InMemoryUserDetailsManager(user, user2);
+        return new InMemoryUserDetailsManager(user, user2, user3);
     }
 }

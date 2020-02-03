@@ -15,27 +15,29 @@ public class SMSController {
     @Autowired
     private SMSRepo smsRepo;
 
-    @PostMapping("/filter_sms")
-    public String filter_sms (@RequestParam String filter_sms, Map<String, Object> model ) {
-        Iterable <SMS> sms;
+    @GetMapping("/sms")
+    public String filter_sms (@RequestParam (required = false) String filter_sms, Model model ) {
+        Iterable <SMS> sms = null;
         if (filter_sms !=null && !filter_sms.isEmpty()){
             sms = smsRepo.findByDateIgnoreCaseContaining(filter_sms);
         } else {
-            sms = smsRepo.findAll();
+            smsRepo.findAll();
         }
-        model.put("sms", sms);
+        model.addAttribute("sms", sms);
+        model.addAttribute("filter_sms", filter_sms);
         return "sms";
     }
 
-    @PostMapping("/filter_sms_admin")
-    public String filter_sms_admin (@RequestParam String filter_sms_admin, Map<String, Object> model ) {
-        Iterable <SMS> sms;
+    @GetMapping("/sms_admin")
+    public String filter_sms_admin (@RequestParam (required = false) String filter_sms_admin, Model model ) {
+        Iterable <SMS> sms = null;
         if (filter_sms_admin !=null && !filter_sms_admin.isEmpty()){
             sms = smsRepo.findByDateIgnoreCaseContaining(filter_sms_admin);
         } else {
-            sms = smsRepo.findAll();
+            smsRepo.findAll();
         }
-        model.put("sms", sms);
+        model.addAttribute("sms", sms);
+        model.addAttribute("filter_sms_admin", filter_sms_admin);
         return "sms_admin";
     }
 
@@ -62,12 +64,30 @@ public class SMSController {
         return "redirect:/sms_admin";
     }
 
-    @GetMapping("/sms_admin")
-    public String sms_admin(Map<String, Object> model) {
-        return "sms_admin";
+
+    @GetMapping("/edit_sms/{id}")
+    public String editId_sms(@PathVariable Integer id, Model model ) {
+        Iterable<SMS> sms = smsRepo.findAllById(id);
+
+        model.addAttribute("id", sms);
+        model.addAttribute("date", sms);
+        model.addAttribute("topic", sms);
+        model.addAttribute("initiator", sms);
+        model.addAttribute("text_topic", sms);
+        model.addAttribute("pull", sms);
+        model.addAttribute("comments", sms);
+
+        return "edit_sms";
     }
 
+    @PostMapping ("/update_sms")
+    public String update_sms (@RequestParam (value = "id", required = false) Integer id,
+                          @ModelAttribute SMS sms){
+        smsRepo.findById(id);
+        smsRepo.save(sms);
 
+        return "sms_admin";
+    }
 
 
 }

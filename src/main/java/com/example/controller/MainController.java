@@ -3,6 +3,7 @@ package com.example.controller;
 import com.example.domain.Message;
 import com.example.model.MessageRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -19,18 +20,32 @@ public class MainController {
         return "main";
     }
     @GetMapping("/map")
-    public String map (Map<String, Object> model) {
+    public String map (@RequestParam (required = false) String filter, Model model) {
+        Iterable <Message> messages = null;
+        if (filter !=null && !filter.isEmpty()){
+           messages = messageRepo.findBySeloIgnoreCaseContaining(filter);
+        } else {
+            messageRepo.findAll();
+        }
+        model.addAttribute("messages", messages);
+        model.addAttribute("filter", filter);
+
         return "map";
     }
 
-    @GetMapping("/filter")
-    public String filter(Map<String, Object> model) {
-        return "redirect:/map";
-    }
 
-    @GetMapping("/filterAd")
-    public String filterAd(Map<String, Object> model) {
-        return "redirect:/admin";
+    @GetMapping("/admin")
+    public String admin (@RequestParam (required = false) String filterAd, Model model) {
+        Iterable <Message> messages = null;
+        if (filterAd !=null && !filterAd.isEmpty()){
+            messages = messageRepo.findBySeloIgnoreCaseContaining(filterAd);
+        } else {
+            messageRepo.findAll();
+        }
+        model.addAttribute("messages", messages);
+        model.addAttribute("filterAd", filterAd);
+
+        return "admin";
     }
 
     @GetMapping ("/calc")
@@ -39,42 +54,12 @@ public class MainController {
     }
 
 
-    @PostMapping ("filter")
-    public String filter(@RequestParam String filter, Map<String, Object> model){
-        Iterable <Message> messages;
-        if (filter !=null && !filter.isEmpty()){
-            messages = messageRepo.findBySeloIgnoreCaseContaining(filter);
-        } else {
-            messages = messageRepo.findAll();
-        }
-    model.put("messages", messages);
-    return "map";
-}
-
-    @PostMapping ("filterAd")
-    public String filterAd(@RequestParam String filterAd, Map<String, Object> model){
-        Iterable <Message> messages;
-       if (filterAd !=null && !filterAd.isEmpty()){
-           messages = messageRepo.findBySeloIgnoreCaseContaining(filterAd);
-       } else {
-           messages = messageRepo.findAll();
-       }
-        model.put("messages", messages);
-        return "map_admin";
-    }
-
     @GetMapping("/delete/{id}")
     public String delete(@PathVariable Integer id, Map<String, Object> model) {
         messageRepo.deleteById(id);
-        return "redirect:/map_admin";
+        return "redirect:/admin";
     }
 
-    @GetMapping("/map_admin")
-    public String admin (Map<String, Object> model) {
-        Iterable <Message> messages = messageRepo.findAll();
-        model.put("message",messages);
-        return "map_admin";
-    }
 
 
     @GetMapping("/add")
@@ -93,7 +78,7 @@ public class MainController {
                        Model model){
         Message message = new Message(area, district, region, selo, voice, WCDMA, LTE);
         messageRepo.save(message);
-        return "map_admin";
+        return "admin";
     }
 
     @GetMapping("/edit/{id}")
@@ -118,29 +103,9 @@ public class MainController {
         messageRepo.findAllById(id);
         messageRepo.save(message);
 
-        return "map_admin";
+        return "admin";
     }
 
-    @GetMapping("/prepaid")
-    public String prepaid(Map<String, Object> model) {
-        return "prepaid";
-    }
-
-    @GetMapping("/postpaid")
-    public String postpaid (Map<String, Object> model) {
-        return "postpaid";
-    }
-
-    @GetMapping("/privet")
-    public String privet (Map<String, Object> model) {
-        return "privet";
-    }
-
-
-    @GetMapping("/content")
-    public String content (Map<String, Object> model) {
-        return "content";
-    }
 
     @GetMapping("/vip")
     public String vip(Map<String, Object> model) {
@@ -148,15 +113,6 @@ public class MainController {
     }
 
 
-    @GetMapping("/sms")
-    public String sms(Map<String, Object> model) {
-        return "sms";
-    }
-
-    @GetMapping("/pull")
-    public String pull (Map<String, Object> model) {
-        return "pull";
-    }
 
 //    @ResponseStatus(HttpStatus.NOT_FOUND)
 //    public class NotFoundException extends RuntimeException {
@@ -168,7 +124,7 @@ public class MainController {
 //        public NotFoundException(String name) {
 //            super("Country with name=" + name + " not found");
 //        }
-//    } Exception for future
+//    }
 
 }
 

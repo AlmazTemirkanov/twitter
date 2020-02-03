@@ -4,6 +4,8 @@ import com.example.domain.Pull;
 import com.example.model.PullRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -13,17 +15,19 @@ import java.util.Map;
 public class PullController {
 
     @Autowired
+
     private PullRepo pullRepo;
 
-    @PostMapping("filter_pull")
-    public String filter_pull(@RequestParam Integer filter_pull, Map<String, Object> model){
-        Iterable <Pull> pull;
+    @GetMapping("/pull")
+    public String filter_pull(@RequestParam (required = false) Integer filter_pull, Model model){
+        Iterable <Pull> pull = null;
         if (filter_pull !=null){
             pull = pullRepo.findByNumber(filter_pull);
         } else {
-            pull = pullRepo.findByNumber(filter_pull);
+            pullRepo.findByNumber(filter_pull);
         }
-        model.put("pull", pull);
+        model.addAttribute("pull", pull);
+        model.addAttribute("filter_pull", filter_pull);
         return "pull";
     }
 }

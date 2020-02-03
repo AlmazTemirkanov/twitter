@@ -38,20 +38,30 @@
                 <a class="nav-link ml-4" href="/map">Карта</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link ml-4" href="/content">Контент провайдеры</a>
+                <a class="nav-link ml-4" href="/content">Провайдеры</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link ml-4" href="/vip">Проверка номеров</a>
+                <a class="nav-link ml-4" href="/vip">VIP</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link ml-4" href="/sms">SMS-рассылки</a>
+                <a class="nav-link ml-4" href="/sms">SMS</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link ml-4" href="/pull">Все пулы</a>
+                <a class="nav-link ml-4" href="/pull">Пулы</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link ml-4" href="/privet">Привет+</a>
             </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    CRM
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/crm">SR Prepaid</a>
+                    <a class="dropdown-item" href="/crmpost">SR Postpaid</a>
+                </div>
+            </li>
+
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Роуминг
@@ -71,16 +81,15 @@
   <span class="navbar-text ml-2 pt-5">
     Поиск по номерам
   </span>
-    <form class="form-inline" method="post" action="filter_pull">
-        <input class="form-control ml-2" type="text" name="filter_pull" placeholder="77Axxxxxx">
-        <input type="hidden" name="_csrf" value="{{_csrf.token}}">
+    <form class="form-inline" method="get" action="/pull">
+        <input class="form-control ml-2" type="text" name="filter_pull" placeholder="77Axxxxxx" value="{{#filter_pull}}{{filter_pull}}{{/filter_pull}}">
         <button type="submit" class="btn btn-outline-dark ml-2">Найти</button>
     </form>
 
     <table class="table table-striped" border="1" cellpadding="5">
         <thead class="thead-dark">
 
-        <th scope="col" >Номер</th>
+        <th scope="col">Номер</th>
         <th scope="col">Тематика</th>
         <th scope="col">Дата отправки</th>
         <th scope="col">Дата миграции</th>
