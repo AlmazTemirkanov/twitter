@@ -75,9 +75,15 @@
   </span>
 
     <form class="form-inline" method="get" action="/content">
-        <input class="form-control ml-2" type="text" name="filter_content" value="{{#filter_content}}{{filter_content}}{{/filter_content}}" >
+        <input class="form-control ml-2" type="text" name="filter_content" placeholder="1234" value="{{#filter_content}}{{filter_content}}{{/filter_content}}" >
         <button type="submit" class="btn btn-outline-dark ml-2">Найти</button>
-
+    </form>
+    <span class="navbar-text ml-2">
+    Поиск номерам
+  </span>
+    <form class="form-inline" method="get" action="/content_name">
+        <input class="form-control ml-2" type="text" name="filter_content_name" placeholder="Название" value="{{#filter_content_name}}{{filter_content_name}}{{/filter_content_name}}" >
+        <button type="submit" class="btn btn-outline-dark ml-2">Найти</button>
     </form>
 
     <table class="table table-striped" border="1" cellpadding="5">

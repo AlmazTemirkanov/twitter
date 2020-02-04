@@ -118,13 +118,15 @@ public class MainController {
 //    public class NotFoundException extends RuntimeException {
 //
 //        public NotFoundException(int id) {
-//            super("Country with id=" + id + " not found");
+//            super("Country with id not found");
 //        }
 //
 //        public NotFoundException(String name) {
-//            super("Country with name=" + name + " not found");
+//            super("Country with name= not found");
 //        }
 //    }
+
+
 
 }
 

@@ -41,6 +41,20 @@ public class ContentController {
         return "content_admin";
     }
 
+    @GetMapping("/content_name")
+    public String filter_content_name (@RequestParam (required = false) String filter_content_name, Model model ) {
+        Iterable <Content> content = null;
+        if (filter_content_name !=null && !filter_content_name.isEmpty()){
+            content = contentRepo.findByServiceIgnoreCaseContaining(filter_content_name);
+        } else {
+            contentRepo.findAll();
+        }
+        model.addAttribute("content", content);
+        model.addAttribute("filter_content_name", filter_content_name);
+        return "content";
+    }
+
+
 
     @GetMapping("/add_content")
     public String add_content (Map<String, Object> model) {
