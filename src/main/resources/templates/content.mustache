@@ -6,16 +6,11 @@
     <meta charset="UTF-8">
     <title>Content</title>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" >
 
 </head>
 
 <body>
-
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <span class="navbar-brand mb-0 h1">BEENAVIGATOR</span>
@@ -71,22 +66,17 @@
 
 <div class="container mt-5">
     <span class="navbar-text ml-2 pt-5">
-    Поиск номерам
+    Поиск по номерам и названиям
   </span>
 
     <form class="form-inline" method="get" action="/content">
-        <input class="form-control ml-2" type="text" name="filter_content" placeholder="1234" value="{{#filter_content}}{{filter_content}}{{/filter_content}}" >
-        <button type="submit" class="btn btn-outline-dark ml-2">Найти</button>
-    </form>
-    <span class="navbar-text ml-2">
-    Поиск номерам
-  </span>
-    <form class="form-inline" method="get" action="/content_name">
-        <input class="form-control ml-2" type="text" name="filter_content_name" placeholder="Название" value="{{#filter_content_name}}{{filter_content_name}}{{/filter_content_name}}" >
+        <input class="form-control ml-2" type="text" name="filter_content" placeholder="1234"
+               id="ContentPhrase" onkeyup="ContentSearch()" value="{{#filter_content}}{{filter_content}}{{/filter_content}}" >
         <button type="submit" class="btn btn-outline-dark ml-2">Найти</button>
     </form>
 
-    <table class="table table-striped" border="1" cellpadding="5">
+
+    <table class="table table-striped" id="Content_id" border="1" cellpadding="5">
         <thead class="thead-dark">
 
         <th scope="col">Номер</th>
@@ -112,9 +102,39 @@
             </div>
         {{/content}}
     </table>
+
+    <script type="text/javascript">
+
+        function ContentSearch() {
+            var phrase = document.getElementById('ContentPhrase');
+            var table = document.getElementById('Content_id');
+            var regPhrase = new RegExp(phrase.value, 'i');
+            var flag = false;
+            for (var i = 1; i < table.rows.length; i++) {
+                flag = false;
+                for (var j = table.rows[i].cells.length - 1; j >= 0; j--) {
+                    flag = regPhrase.test(table.rows[i].cells[j].innerHTML);
+                    if (flag) break;
+                }
+                if (flag) {
+                    table.rows[i].style.display = "";
+                } else {
+                    table.rows[i].style.display = "none";
+                }
+
+            }
+        }
+
+    </script>
+
 </div>
 
 
+<!-- Подключаем jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Подключаем Bootstrap JS -->
+<script src="/js/bootstrap.min.js"></script>
 
 </body>
 

@@ -3,10 +3,10 @@ package com.example.controller;
 import com.example.domain.Message;
 import com.example.model.MessageRepo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.Map;
 
 
@@ -21,7 +21,7 @@ public class MainController {
     }
     @GetMapping("/map")
     public String map (@RequestParam (required = false) String filter, Model model) {
-        Iterable <Message> messages = null;
+        Iterable <Message> messages = messageRepo.findAll();
         if (filter !=null && !filter.isEmpty()){
            messages = messageRepo.findBySeloIgnoreCaseContaining(filter);
         } else {
@@ -51,6 +51,16 @@ public class MainController {
     @GetMapping ("/calc")
     public String calc(Model model){
         return "calc";
+    }
+
+    @GetMapping ("/game_one")
+    public String game_one(Model model){
+        return "game_one";
+    }
+
+    @GetMapping ("/game_two")
+    public String game_two(Model model){
+        return "game_two";
     }
 
 
@@ -111,22 +121,6 @@ public class MainController {
     public String vip(Map<String, Object> model) {
         return "vip";
     }
-
-
-
-//    @ResponseStatus(HttpStatus.NOT_FOUND)
-//    public class NotFoundException extends RuntimeException {
-//
-//        public NotFoundException(int id) {
-//            super("Country with id not found");
-//        }
-//
-//        public NotFoundException(String name) {
-//            super("Country with name= not found");
-//        }
-//    }
-
-
 
 }
 

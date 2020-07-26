@@ -26,28 +26,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/", "/registration", "/main", "/filter", "/prepaid", "/postpaid",
                                         "/filter_postpaid", "/filter_prepaid", "/privet",
                                         "/sms", "/filter_sms", "/filter_pull", "/filter_crmpost", "/crmpost",
-                        "/pull", "/map", "/crm", "/filter_crm","/calc", "/css/style.css", "/js/main.min.js",
-                        "/img/theme-4.jpg",
-                        "/img/font-1.jpg",
-                        "/img/psd-1.jpg",
-                        "/img/psd-2.jpg",
-                        "/img/psd-3.jpg",
-                        "/img/ai-1.jpg",
-                        "/img/ai-2.jpg",
-                        "/img/theme-2.jpg",
-                        "img/psd-3.jpg",
-                        "/img/font-2.jpg",
-                        "/img/font-3.jpg",
-                        "/img/icon-font.svg",
-                        "/img/icon-themes.svg",
-                        "/img/icon-psd.svg",
-                        "/img/icon-ai.svg",
-                        "/img/icon-premium.svg",
-                        "/img/icon-photo.svg",
-                        "/img/next.svg",
-                        "/img/prev.svg",
-
-
+                                        "/pull", "/map", "/crm", "/filter_crm","/calc", "/game_one", "/game_two",
+                        "/css/**",
+                        "/js/**",
+                        "/img/**",
                     "/filter_privet", "/filter_title", "/content_name", "/content", "/filter_content", "/vip").permitAll()
                 .anyRequest().authenticated()
                 .and()
@@ -57,6 +39,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                     .logout()
                     .permitAll();
+
     }
 
     @Override

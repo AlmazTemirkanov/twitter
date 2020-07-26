@@ -1,16 +1,11 @@
 <html>
 <head>
 
-
+    <link rel="stylesheet" href="/css/bootstrap.min.css" >
 
     <meta charset="UTF-8">
     <title>BeeNavigator</title>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 </head>
 <style>
@@ -81,14 +76,15 @@
     Поиск по сёлам
   </span>
     <form class="form-inline" method="get" action="/map">
-        <input class="form-control ml-2" type="text" name="filter" value="{{#filter}}{{filter}}{{/filter}}" >
+        <input class="form-control ml-2" type="text" name="filter"
+               id="phrase" onkeyup="tableSearch()" value="{{#filter}}{{filter}}{{/filter}}">
         <button type="submit" class="btn btn-outline-dark ml-2">Найти</button>
     </form>
 
-    <table class="table table-striped" border="1" cellpadding="5">
+    <table class="table table-striped" id="_id" border="1" cellpadding="5">
         <thead class="thead-dark">
 
-        <th scope="col" >Область</th>
+        <th scope="col">Область</th>
         <th scope="col">Район</th>
         <th scope="col">Округ</th>
         <th scope="col">Село</th>
@@ -101,35 +97,49 @@
             <div> <!-- -->
                 <tr>
 
-                    <th>{{#area}}{{area}}{{/area}}</th>
-                    <th>{{#district}}{{district}}{{/district}}</th>
-                    <th>{{#region}}{{region}}{{/region}}</th>
-                    <th>{{#selo}}{{selo}}{{/selo}}</th>
-                    <th>{{#voice}}{{voice}}{{/voice}}</th>
-                    <th>{{#WCDMA}}{{WCDMA}}{{/WCDMA}}</th>
-                    <th>{{#LTE}}{{LTE}}{{/LTE}}</th>
+                    <td>{{#area}}{{area}}{{/area}}</td>
+                    <td>{{#district}}{{district}}{{/district}}</td>
+                    <td>{{#region}}{{region}}{{/region}}</td>
+                    <td><a href="https://www.openstreetmap.org/search?query=Кыргызстан {{selo}}">{{#selo}}{{selo}}{{/selo}}</a></td>
+                    <td>{{#voice}}{{voice}}{{/voice}}</td>
+                    <td>{{#WCDMA}}{{WCDMA}}{{/WCDMA}}</td>
+                    <td>{{#LTE}}{{LTE}}{{/LTE}}</td>
 
                 </tr>
             </div>
         {{/messages}}
     </table>
+    <script type="text/javascript">
+
+        function tableSearch() {
+            var phrase = document.getElementById('phrase');
+            var table = document.getElementById('_id');
+            var regPhrase = new RegExp(phrase.value, 'i');
+            var flag = false;
+            for (var i = 1; i < table.rows.length; i++) {
+                flag = false;
+                for (var j = table.rows[i].cells.length - 1; j >= 0; j--) {
+                    flag = regPhrase.test(table.rows[i].cells[j].innerHTML);
+                    if (flag) break;
+                }
+                if (flag) {
+                    table.rows[i].style.display = "";
+                } else {
+                    table.rows[i].style.display = "none";
+                }
+
+            }
+        }
+
+    </script>
 </div>
 
+<!-- Подключаем jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-
-
-
-
+<!-- Подключаем Bootstrap JS -->
+<script src="/js/bootstrap.min.js"></script>
 
 </body>
 
 </html>
-
-<footer>
-    <div class="navbar ">
-        <div class="navbar-light bg-light fixed-bottom">
-            <span class="navbar-brand mb-3  "></span>
-            <p class="text-center">Beeline © 2020</p>
-        </div>
-    </div>
-</footer>

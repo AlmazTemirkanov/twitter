@@ -24,11 +24,13 @@ C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\domain\Prepaid.jav
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\config\MvcConfig.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\domain\Role.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\model\PrepaidRepo.java
+C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\controller\RestController.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\model\CRMPostRepo.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\domain\SMS.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\model\UserRepo.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\controller\CRMPostController.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\controller\PrivetController.java
+C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\controller\ErrorController.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\controller\RegistrationController.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\controller\PostpaidController.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\controller\SMSController.java

@@ -6,22 +6,52 @@
     <meta charset="UTF-8">
     <title>BeeNavigator</title>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="/css/bootstrap.min.css" >
 </head>
-<style>
-    table {
-        table-layout: fixed; /* Фиксированная ширина ячеек */
-        width: 100%; /* Ширина таблицы */
+<script>
+    function addition() {
+        var a = parseFloat(document.getElementById('a').value);
+        var b = parseFloat(document.getElementById('b').value);
+
+        if (isNaN(a)==true) a=0;
+        if (isNaN(b)==true) b=0;
+
+        var t = a - (b*0.95);
+        if (t<0) {
+            document.getElementById('result').innerHTML = "Большой кредит доверия";
+
+        }
+        else {
+
+            document.getElementById('result').innerHTML = a + " - " + b + "* 0,95 " + " = мин. сумма для активации " + Math.round(t) + " сом ";
+        }
     }
-    .col1 { width: 160px; }
-    .coln { width: 60px; }
-</style>
+</script>
+
+
+<script>
+    function additions() {
+        var c = parseFloat(document.getElementById('c').value);
+        var d = parseFloat(document.getElementById('d').value);
+
+        if (isNaN(c)==true) c=0;
+        if (isNaN(d)==true) d=0;
+
+        var f = c - d;
+
+        if (f<0){
+            document.getElementById('res').innerHTML = "Задолженности нет";
+        }
+
+        else {
+            document.getElementById('res').innerHTML = c + " - " + d +  " = Задолженность " + Math.round(f) + " сом ";
+        }
+    }
+</script>
+
+
 <body>
+
 
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -81,10 +111,10 @@
 
 
 <div class="mt-5 pt-5" style="width: 350px;">
-  <span class="ml-5">
-    Проверка B2B и B2C номеров
+  <span class="ml-4">
+    <b>Проверка B2B и B2C номеров</b>
   </span>
-    <div class="input-group input-group m-5">
+    <div class="input-group input-group ml-4 mt-3">
 
         <input type="text" class="form-control" placeholder="77Xxxxxxx" id="myField">
         <input type="submit" class="btn btn-outline-dark ml-2"  value="Проверить"
@@ -111,6 +141,9 @@
    }
       else if ((s[3]!=s[4])&& (s[4]==s[5])&& (s[5]==s[6])&&(s[6]==s[7])&&(s[7]==s[8])){
    alert('Платина-7500 сом -3'); // 3
+   }
+   else if ((s[3]!=s[4])&& (s[4]==s[5])&& (s[5]==s[6])&&(s[6]==s[7])&&(s[7]!=s[8])&&(s[3]==s[8])){
+   alert('Платина-7500 сом -3_1'); // 3_1
    }
       else if ((s[3]==s[4]) && (s[6]==s[4]) && (s[6]==s[7]) && (s[8]==s[5]) && (s[5]!=s[4]) && (s[3]==s[1]) && (s[2]==s[5])){
    alert('Платина-7500 сом -4'); // 4
@@ -491,15 +524,53 @@
     </div>
 </div>
 </div>
+
+
+<span class="navbar-text ml-4 mt-5">
+    <b>Превышение кредитного лимита</b>
+  </span>
+<form class="px-4 py-3">
+    <label for="schet">Баланс</label>
+    <div class="form-group" >
+
+        <input id="a" type="text"><br>
+    </div>
+    <label for="platej">Кредит доверия</label>
+    <div class="form-group">
+
+        <input id="b" type="text"><br>
+        <input type="button" class="btn btn-outline-dark mt-3" value="Расчитать" onclick="addition();"><br>
+
+</form>
+<h3>
+    <div id="result"></div>
+</h3>
+
+<span class="navbar-text ml-1 mt-5">
+    <b>Расчет задолженности</b>
+  </span>
+<form class="col-xs-8 mt-3">
+    <label for="schet">Выставленный счет</label>
+    <div class="form-group" >
+
+        <input id="c" type="text"><br>
+    </div>
+    <label for="platej">Платежи</label>
+    <div class="form-group">
+        <input id="d" type="text"><br>
+        <input type="button" class="btn btn-outline-dark mt-3" value="Расчитать" onclick="additions();"><br>
+        </div>
+</form>
+<h3>
+    <div id="res">
+        <label for="schet"></label>
+    </div>
+    </h3>
+
 </body>
+<!-- Подключаем jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Подключаем Bootstrap JS -->
+<script src="js/bootstrap.min.js"></script>
 
 </html>
-
-<footer>
-    <div class="navbar ">
-        <div class="navbar-light bg-light fixed-bottom">
-            <span class="navbar-brand mb-3	"></span>
-            <p class="text-center">Beeline © 2020</p>
-        </div>
-    </div>
-</footer>

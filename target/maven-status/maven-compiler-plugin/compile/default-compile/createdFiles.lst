@@ -4,6 +4,7 @@ com\example\domain\Postpaid.class
 com\example\controller\CRMPostController.class
 com\example\model\UserRepo.class
 com\example\controller\ContentController.class
+com\example\controller\RestController.class
 com\example\domain\User.class
 com\example\domain\Content.class
 com\example\model\PostpaidRepo.class
@@ -24,6 +25,7 @@ com\example\config\MvcConfig.class
 com\example\model\ContentRepo.class
 com\example\domain\CRMPost.class
 com\example\controller\PrepaidController.class
+com\example\controller\ErrorController.class
 com\example\controller\PrivetController.class
 com\example\controller\SMSController.class
 com\example\controller\RegistrationController.class
