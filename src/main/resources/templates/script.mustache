@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css" >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script page</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <span class="navbar-brand mb-0 h1">BEENAVIGATOR</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link ml-4" href="/">Главная</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ml-4" href="/map">Карта</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ml-4" href="/content">Провайдеры</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ml-4" href="/vip">VIP</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ml-4" href="/sms">SMS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ml-4" href="/pull">Пулы</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ml-4" href="/privet">Привет+</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    CRM
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/crm">SR Prepaid</a>
+                    <a class="dropdown-item" href="/crmpost">SR Postpaid</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Роуминг
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/prepaid">Роуминг Pre</a>
+                    <a class="dropdown-item" href="/postpaid">Роуминг Post</a>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+<style type="text/css">
+    body {
+        background-color: #f4f5ed;
+    }
+</style>
+
+<div id="app">
+
+    <div class="container mt-5 pt-5">
+        <button class="btn btn-outline-dark">Нет дозвона</button>
+        <button class="btn btn-outline-dark">Нет интернета</button>
+        <button class="btn btn-outline-dark">Настройка телефона</button>
+        <button class="btn btn-outline-dark">Настройка Модема</button>
+        <button class="btn btn-outline-dark">Настройка Модема</button>
+        <button class="btn btn-outline-dark">Выгодный ТП</button>
+        <button class="btn btn-outline-dark">Продажа</button>
+
+        <div class="container mt-5">
+            <h4>Скрипт "Нет дозвона"</h4>
+            <br>
+
+            <p class="font-weight-bold">На каком номере наблюдается проблема?</p>
+
+            <button @click="mess()" class="btn btn-outline-dark">На номере, с которого звонит</button>
+            <button @click="mess2" class="btn btn-outline-dark">На другом номере</button>
+            <br>
+            <br>
+
+            <div v-show ="status">
+                <p class="font-weight-bold">Проблема наблюдается при дозвоне только на один номер или на все номера?</p>
+                <button @click="mess1()" class="btn btn-outline-dark">На 1 номер</button>
+                <button @click="mess3" class="btn btn-outline-dark">На все номера</button>
+            </div>
+            <br>
+            <div v-show ="status2">
+                <p class="font-weight-bold">Уточните у Клиента ответ системы при дозвоне?</p>
+                <button @click="mess4()" class="btn btn-outline-dark">Ответа нет, просто сброс</button>
+                <button @click="mess11" class="btn btn-outline-dark">Короткие гудки, "Абонент занят"</button>
+                <p></p>
+                <button @click="mess112" class="btn btn-outline-dark">Недостаточно средств</button>
+                <button @click="mess113" class="btn btn-outline-dark">Отключен</button>
+            </div>
+            <br>
+            <div v-show ="status3">
+                <p class="font-weight-bold">Проверьте в CRM -> Абонент -> Сетевые настройки: Подключена ли Базовая услуга "Voice"?</p>
+                <button @click="mess5()" class="btn btn-outline-dark">Да, подключена</button>
+                <button @click="mess114" class="btn btn-outline-dark">Нет, не подключена</button>
+            </div>
+            <br>
+            <div v-show ="status4">
+                <p class="font-weight-bold">Проверьте в CRM статус номера?</p>
+                <button @click="mess6()" class="btn btn-outline-dark">Активный</button>
+                <button @click="mess115" class="btn btn-outline-dark">Блокирован</button>
+                <button @click="mess116" class="btn btn-outline-dark">В режиме ожидания</button>
+                <button @click="mess117" class="btn btn-outline-dark">Терминирован</button>
+            </div>
+            <br>
+            <div v-show ="status5">
+                <p class="font-weight-bold">В телефоне отображается пиктограмма антенны?</p>
+                <button @click="mess7()"class="btn btn-outline-dark">Отображается</button>
+                <button @click="mess118()" class="btn btn-outline-dark">Нет значка</button>
+            </div>
+            <br>
+            <div v-show ="status6">
+                <p class="font-weight-bold">Уточните откуда обращается Клиент и проверьте покрытие в Бинавигаторе?</p>
+                <button @click="mess8()" class="btn btn-outline-dark">Покрытие есть</button>
+                <button @click="mess119()"class="btn btn-outline-dark">Покрытия нет</button>
+            </div>
+            <br>
+            <div v-show ="status7">
+                <p class="font-weight-bold">Проверьте наличие "Актуального инцидента", "Актуальной проблемы", "Работы на БС" в Биинфо по местонахождению Клиента?</p>
+                <button @click="mess9()" class="btn btn-outline-dark">Нет проблемы</button>
+                <button @click="mess120()" class="btn btn-outline-dark">Есть проблемы</button>
+            </div>
+            <br>
+
+            <!-- <div v-show ="status8">
+             <h3>Проверьте наличие "Актуального инцидента", "Актуальной проблемы", "Работы на БС" в Биинфо по местонахождению Клиента?</h3>
+            <button @click="mess9()"> да </button> <label> Нет проблемы?</label>
+              <br>
+              <button @click="mess120()">да</button><label> Есть проблемы?</label>
+            </div> -->
+
+            <div v-show ="status9">
+                <p class="font-weight-bold">Клиент перезагружал аппарат и пересталял сим-карты в другой телефон??</p>
+                <button @click="mess10()" class="btn btn-outline-dark">Перезагружал</button>
+                <button @click="mess121()" class="btn btn-outline-dark">Не перегружал</button>
+            </div>
+            <br>
+            <div v-show ="status10">
+                <p class="font-weight-bold">Проверьте в CRM, оформлен ли ТТ на номере по этой тематике?</p>
+                <button @click="mess123()" class="btn btn-outline-dark">Не оформлен</button>
+                <button @click="mess122()" class="btn btn-outline-dark">Да оформлен</button>
+            </div>
+            <br>
+            <div>
+                <button onClick="window.location.reload();" class="btn btn-outline-success">Обновить</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<script type="text/javascript">
+
+    new Vue({
+        el: '#app',
+        data: {
+            message: 'Привет, Vue!',
+            status: false,
+            status2: false,
+            status3: false,
+            status4: false,
+            status5: false,
+            status6: false,
+            status7: false,
+            status8: false,
+            status9: false,
+            status10: false,
+        },
+
+        methods:{
+            mess(){
+                alert("Проблема скорее всего с дозвоном на опеределенный номер, т.к. звонок на *611 идет, либо номер заблокирован по фроду");
+            },
+
+            mess1(){
+                alert("Скорее всего этот номер ограничил дозвон с аппарата, либо включил номер абонента в Черный список");
+            },
+            mess11(){
+                alert("Абонент, которому звонит Клиент сейчас разговаривает с другим номером, рекомендуйте позвонить позже. Либо абонент включил номер Клиента в Черный список");
+            },
+            mess112(){
+                alert("Проверьте баланс и пакеты на номере, порекомендуйте Клиенту пополнить баланс");
+            },
+            mess113(){
+                alert("Аппарат вызываемого абонента отключен, порекомендуйте позвонить позже");
+            },
+
+            mess114(){
+                alert("Порекомендуйте Клиенту обратиться в ближайший ОПиО для подключения");
+            },
+            mess115(){
+                alert("Исходя из типа блокировки предоставьте Клиенту ОС");
+            },
+            mess116(){
+                alert("Порекомендуйте пополнить баланс и совершить звонок");
+            },
+            mess117(){
+                alert("Проверьте номер в Carem, во вкладке 'Статус номера в CRM', исходя из статуса предоставьте ОС");
+            },
+
+            mess118(){
+                alert("Скорее всего сим-карта повреждена. Порекомендуйте переставить сим-карту в другой телефон, если проблема сохранится, необходимо порекомендовать восстановить сим-карту");
+            },
+
+            mess119(){
+                alert("Проблема связана с тем, что в селе нет покрытия. Зафиксируйте предложение на установку БС");
+            },
+            mess120(){
+                alert("Проблема связана с актуальной проблемой, по которому ведутся работы со стороны технических специалистов");
+            },
+            mess121(){
+                alert("Порекомендуйте совершить эти действия, т.к. проблемы могут быть в аппарате");
+            },
+            mess122(){
+                alert("Порекомендуйте ожидать решения заявки. Отправьте Клиенту ссылку https://beeline.kg/ru/track, где абонент сам может проверять статус ТТ");
+            },
+            mess123(){
+                alert("Оформите ТТ по тематике: Не могу позвонить/принять звонок/Входящие/Исходящие вызовы/Проблема с качеством связи/соответствующая область, с полным заполнением шаблона. Не забудьте рассказать сроки решения заявки");
+            },
+
+
+
+            mess2(){
+                this.status = true;
+            },
+            mess3(){
+                this.status2 = true;
+            },
+            mess4(){
+                this.status3 = true;
+            },
+            mess5(){
+                this.status4 = true;
+            },
+            mess6(){
+                this.status5 = true;
+            },
+            mess7(){
+                this.status6 = true;
+            },
+            mess8(){
+                this.status7 = true;
+            },
+            mess9(){
+                this.status9 = true;
+            },
+            mess10(){
+                this.status10 = true;
+            },
+
+        }
+    })
+
+</script>
+
+</body>
+</html>

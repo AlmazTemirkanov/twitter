@@ -1,7 +1,7 @@
 package com.example.controller;
 
 import com.example.domain.Message;
-import com.example.model.MessageRepo;
+import com.example.repo.MessageRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -120,6 +120,16 @@ public class MainController {
     @GetMapping("/vip")
     public String vip(Map<String, Object> model) {
         return "vip";
+    }
+
+    @GetMapping("/script")
+    public String script(Map<String, Object> model) {
+        return "script";
+    }
+
+    @GetMapping("/office")
+    public String office(Map<String, Object> model) {
+        return "office";
     }
 
 }

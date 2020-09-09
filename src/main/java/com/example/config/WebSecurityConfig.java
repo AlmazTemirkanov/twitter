@@ -24,9 +24,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 .antMatchers("/", "/registration", "/main", "/filter", "/prepaid", "/postpaid",
-                                        "/filter_postpaid", "/filter_prepaid", "/privet",
+                                        "/filter_postpaid", "/filter_prepaid", "/privet", "/office",
                                         "/sms", "/filter_sms", "/filter_pull", "/filter_crmpost", "/crmpost",
-                                        "/pull", "/map", "/crm", "/filter_crm","/calc", "/game_one", "/game_two",
+                                        "/pull", "/map", "/crm", "/filter_crm","/calc", "/game_one", "/game_two", "/script",
                         "/css/**",
                         "/js/**",
                         "/img/**",

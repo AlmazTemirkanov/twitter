@@ -7,120 +7,66 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ccc6667-4494-4afc-b5b8-aca8a4dfd60a" name="Default Changelist" comment="new data base">
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/controller/ErrorController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/controller/RestController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/apis.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/apis2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/game2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/img/сub.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/ajax.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/concat.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/error.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/game_one.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/game_two.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-local.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-prod.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/office.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/script.mustache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/beenavigator_jar/beenavigator.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/beenavigator_jar/beenavigator.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/config/MvcConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/CRMController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/CRMController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/CRMPostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/CRMPostController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/ContentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/ContentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/ErrorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/ErrorController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/PostpaidController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/PostpaidController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/PrepaidController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/PrepaidController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/PrivetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/PrivetController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/PullController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/PullController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/RegistrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/RestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/RestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/SMSController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/SMSController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/domain/Pull.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/domain/Pull.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/domain/Content.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/domain/Content.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/CRMPostRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/repo/CRMPostRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/CRMRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/repo/CRMRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/ContentRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/repo/ContentRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/MessageRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/repo/MessageRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/PostpaidRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/repo/PostpaidRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/PrepaidRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/repo/PrepaidRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/PrivetRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/repo/PrivetRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/PullRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/repo/PullRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/SMSRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/repo/SMSRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/repo/UserRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/apis.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/apis.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/apis2.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/apis2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/ajax.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/add.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/add.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/add_content.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/add_content.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/add_crm.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/add_crm.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/add_crmpost.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/add_crmpost.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/add_postpaid.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/add_postpaid.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/add_prepaid.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/add_prepaid.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/add_sms.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/add_sms.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/calc.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/calc.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/content.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/content.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/content_admin.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/content_admin.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/crm.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/crm.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/crm_admin.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/crm_admin.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/crmpost.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/crmpost.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/crmpost_admin.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/crmpost_admin.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/edit.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/edit.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/edit_content.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/edit_content.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/edit_crm.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/edit_crm.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/edit_crmpost.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/edit_crmpost.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/edit_postpaid.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/edit_postpaid.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/edit_prepaid.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/edit_prepaid.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/edit_sms.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/edit_sms.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/game_one.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/game_one.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/game_two.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/game_two.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.mustache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/map.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/map.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/postpaid.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/postpaid.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/postpaid_admin.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/postpaid_admin.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/prepaid.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/prepaid.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/prepaid_admin.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/prepaid_admin.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/privet.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/privet.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/pull.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/pull.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.mustache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sms.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sms.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sms_admin.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sms_admin.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/userlist.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/userlist.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/vip.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/vip.mustache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/config/MvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/config/MvcConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/config/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/controller/CRMController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/controller/CRMController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/controller/CRMPostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/controller/CRMPostController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/controller/ContentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/controller/ContentController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/controller/PostpaidController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/controller/PostpaidController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/controller/PrepaidController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/controller/PrepaidController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/controller/PrivetController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/controller/PrivetController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/controller/PullController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/controller/PullController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/controller/RegistrationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/controller/RegistrationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/controller/SMSController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/controller/SMSController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/domain/Pull.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/domain/Pull.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/add.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/add.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/add_content.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/add_content.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/add_crm.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/add_crm.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/add_crmpost.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/add_crmpost.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/add_postpaid.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/add_postpaid.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/add_prepaid.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/add_prepaid.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/add_sms.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/add_sms.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/calc.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/calc.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/domain/Content.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/domain/Content.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/model/CRMPostRepo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/model/CRMRepo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/model/ContentRepo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/model/MessageRepo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/model/PostpaidRepo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/model/PrepaidRepo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/model/PrivetRepo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/model/PullRepo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/model/SMSRepo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/model/UserRepo.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/content.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/content.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/content_admin.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/content_admin.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/crm.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/crm.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/crm_admin.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/crm_admin.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/crmpost.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/crmpost.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/crmpost_admin.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/crmpost_admin.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/edit.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/edit.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/edit_content.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/edit_content.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/edit_crm.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/edit_crm.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/edit_crmpost.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/edit_crmpost.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/edit_postpaid.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/edit_postpaid.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/edit_prepaid.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/edit_prepaid.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/edit_sms.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/edit_sms.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.mustache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/main.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/map.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/map.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/postpaid.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/postpaid.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/postpaid_admin.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/postpaid_admin.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/prepaid.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/prepaid.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/prepaid_admin.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/prepaid_admin.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/privet.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/privet.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/pull.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/pull.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/registration.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/registration.mustache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/sms.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/sms.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/sms_admin.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/sms_admin.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/userlist.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/userlist.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/vip.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/vip.mustache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/sweatter-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/sweatter-1.0-SNAPSHOT.jar" afterDir="false" />
@@ -145,12 +91,7 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="projectDB@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="FavoritesManager">
@@ -161,13 +102,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/config/WebSecurityConfig.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="28" column="111" selection-start-line="28" selection-start-column="111" selection-end-line="28" selection-end-column="111" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state>
+              <caret column="27" selection-start-column="27" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -178,11 +116,11 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
-        <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -195,25 +133,16 @@
       <find>mu</find>
       <find>popper</find>
       <find>aja</find>
+      <find>title</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/example/controller/RestController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/game_one.mustache" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/config/WebSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/game_two.mustache" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/popper.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/popper.min.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/sms.mustache" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/add.mustache" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/add_content.mustache" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/add_crm.mustache" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/add_crmpost.mustache" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/add_postpaid.mustache" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/add_prepaid.mustache" />
@@ -245,15 +174,26 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/css/apis.css" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/apis2.css" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/ajax.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/main.mustache" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/vip.mustache" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/controller/MainController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/map.mustache" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/controller/ContentController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/controller/PrivetController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/privet.mustache" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/content.mustache" />
+        <option value="$PROJECT_DIR$/src/main/resources/application-prod.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/application-local.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/domain/Content.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/domain/Postpaid.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/controller/CRMController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/sms.mustache" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/script.mustache.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/main.mustache" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/config/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/script.mustache" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/office.mustache" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
       </list>
     </option>
   </component>
@@ -280,7 +220,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-6" />
     <option name="y" value="1" />
     <option name="width" value="1316" />
@@ -294,6 +234,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -341,41 +283,7 @@
               <item name="twitter" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="twitter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="twitter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="twitter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="twitter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="twitter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="twitter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="twitter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="twitter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="twitter" type="b2602c69:ProjectViewProjectNode" />
@@ -385,18 +293,10 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="twitter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="twitter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -409,7 +309,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../beeinfo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ira" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -426,15 +326,18 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Almaz\IdeaProjects\twitter\src\main\resources" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.domain" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Almaz\IdeaProjects\twitter\src\main\resources\static\js" />
       <recent name="C:\Users\Almaz\IdeaProjects\twitter\src\main\resources\static\css" />
       <recent name="C:\Users\Almaz\IdeaProjects\twitter\src\main\resources\static\img" />
       <recent name="C:\Users\Almaz\IdeaProjects\twitter\src\main\resources\static\font" />
       <recent name="C:\Users\Almaz\IdeaProjects\twitter\src\main\resources\static" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.example.domain" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -611,7 +514,11 @@
       <workItem from="1594918443380" duration="4723000" />
       <workItem from="1595302355565" duration="608000" />
       <workItem from="1595521282835" duration="2039000" />
-      <workItem from="1595754192537" duration="11300000" />
+      <workItem from="1595754192537" duration="15482000" />
+      <workItem from="1599132256933" duration="1489000" />
+      <workItem from="1599562011527" duration="1908000" />
+      <workItem from="1599630775464" duration="2377000" />
+      <workItem from="1599643832518" duration="4563000" />
     </task>
     <task id="LOCAL-00001" summary="change file">
       <created>1574339346808</created>
@@ -645,7 +552,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="904820000" />
+    <option name="totallyTimeSpent" value="919339000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -657,10 +564,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1320" height="784" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49769586" visible="true" weight="0.23015873" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49769586" visible="true" weight="0.24603175" />
       <window_info id="Structure" order="1" sideWeight="0.50230414" side_tool="true" weight="0.2484127" />
       <window_info id="Web" order="2" sideWeight="0.5011601" side_tool="true" weight="0.2531746" />
       <window_info id="Designer" order="3" />
@@ -668,8 +574,8 @@
       <window_info id="Favorites" order="5" sideWeight="0.50230414" side_tool="true" weight="0.2484127" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49920508" weight="0.32872504" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32565284" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49920508" weight="0.39938557" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32565284" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49920508" weight="0.41013825" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49920508" weight="0.32872504" />
@@ -679,7 +585,7 @@
       <window_info anchor="bottom" id="Spring" order="10" sideWeight="0.49920508" weight="0.32872504" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32872504" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5007949" side_tool="true" weight="0.32970452" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.32872504" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.4393241" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.32872504" />
       <window_info anchor="bottom" id="Database Console" order="15" weight="0.3296875" />
       <window_info anchor="bottom" id="Inspection Results" order="16" weight="0.3296875" />
@@ -692,39 +598,6 @@
       <window_info anchor="right" id="Bean Validation" order="6" weight="0.3298887" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4988399" visible="true" weight="0.23333333" />
-      <window_info id="Structure" order="1" sideWeight="0.5011601" side_tool="true" weight="0.2531746" />
-      <window_info id="Web" order="2" sideWeight="0.5011601" side_tool="true" weight="0.2531746" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" sideWeight="0.5011601" side_tool="true" weight="0.2531746" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49920508" weight="0.32872504" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32565284" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49920508" weight="0.39938557" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49920508" weight="0.32872504" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" weight="0.32872504" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32872504" />
-      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32872504" />
-      <window_info anchor="bottom" id="Spring" order="10" sideWeight="0.49920508" weight="0.32872504" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32872504" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5007949" side_tool="true" weight="0.32970452" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.32872504" />
-      <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.32872504" />
-      <window_info anchor="bottom" id="Database Console" order="15" weight="0.3296875" />
-      <window_info anchor="bottom" id="Inspection Results" order="16" weight="0.3296875" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.32936507" />
-      <window_info anchor="right" id="Maven" order="5" weight="0.32936507" />
-      <window_info anchor="right" id="Bean Validation" order="6" weight="0.3298887" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -778,109 +651,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="new data base" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/popper.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/main.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" lean-forward="true" selection-start-column="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/concat.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/bootstrap.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="5" column="21277" lean-forward="true" selection-start-line="5" selection-start-column="21277" selection-end-line="5" selection-end-column="21286" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/popper.min.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/add.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="162" selection-start-line="162" selection-end-line="162" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/add_content.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="155" selection-start-line="155" selection-end-line="155" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/add_crm.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="122" selection-start-line="122" selection-end-line="122" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/add_crmpost.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="123" selection-start-line="123" selection-end-line="123" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/add_postpaid.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="162" selection-start-line="162" selection-end-line="162" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/add_prepaid.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="161" selection-start-line="161" selection-end-line="161" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/add_sms.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="146" selection-start-line="146" selection-end-line="146" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="138" selection-start-line="138" selection-end-line="138" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/calc.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/content_admin.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="124" selection-start-line="124" selection-end-line="124" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/crm_admin.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="117" selection-start-line="117" selection-end-line="117" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/crmpost.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="101" selection-start-line="101" selection-end-line="101" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/crmpost_admin.mustache">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
@@ -947,13 +717,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/prepaid.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="126" selection-start-line="126" selection-end-line="126" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/prepaid_admin.mustache">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
@@ -965,20 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
           <caret line="117" selection-start-line="117" selection-end-line="117" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/registration.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/sms.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1692">
-          <caret line="116" selection-start-line="116" selection-end-line="121" />
         </state>
       </provider>
     </entry>
@@ -1037,51 +786,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/sms_admin.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/vip.mustache">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="118" column="85" selection-start-line="118" selection-start-column="85" selection-end-line="118" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/controller/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#483#484#0" expanded="true" />
-            <element signature="e#512#513#0" expanded="true" />
-            <element signature="e#1525#1526#0" expanded="true" />
-            <element signature="e#1554#1555#0" expanded="true" />
-            <element signature="e#1626#1627#0" expanded="true" />
-            <element signature="e#1659#1660#0" expanded="true" />
-            <element signature="e#1731#1732#0" expanded="true" />
-            <element signature="e#1764#1765#0" expanded="true" />
-            <element signature="e#3607#3608#0" expanded="true" />
-            <element signature="e#3635#3636#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/crm.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="64" column="11" selection-start-line="64" selection-start-column="11" selection-end-line="64" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/main.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-646">
-          <caret line="10" column="64" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="64" />
         </state>
       </provider>
     </entry>
@@ -1106,13 +814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/privet.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="73" column="23" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/content.mustache">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1120,24 +821,206 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/domain/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-start-column="1" selection-end-line="3" selection-end-column="29" />
+        <state relative-caret-position="102">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/repo/PullRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/domain/Content.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
           <folding>
-            <marker date="1595754303118" expanded="true" signature="1:168" ph="..." />
-            <marker date="1595754303118" expanded="true" signature="170:331" ph="..." />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/controller/CRMController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/repo/ContentRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/add.mustache">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/add_postpaid.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/domain/Postpaid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/domain/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/domain/CRMPost.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="637">
+          <caret line="63" column="23" lean-forward="true" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-prod.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-local.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/sms_admin.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/privet.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-697">
+          <caret line="3" column="10" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/script.mustache.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/prepaid.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/crm.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/registration.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/config/WebSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="28" column="111" selection-start-line="28" selection-start-column="111" selection-end-line="28" selection-end-column="111" />
+        <state relative-caret-position="204">
+          <caret line="31" column="34" lean-forward="true" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/main.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="51" column="77" selection-start-line="51" selection-start-column="77" selection-end-line="51" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/office.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="49" column="22" lean-forward="true" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/script.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="83" column="8" lean-forward="true" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="132" column="5" lean-forward="true" selection-start-line="132" selection-start-column="5" selection-end-line="132" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3623#3624#0" expanded="true" />
+            <element signature="e#3651#3652#0" expanded="true" />
+            <element signature="e#3731#3732#0" expanded="true" />
+            <element signature="e#3759#3760#0" expanded="true" />
+            <element signature="e#3850#3851#0" expanded="true" />
+            <element signature="e#3881#3882#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/sms.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="71" column="27" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="27" selection-start-column="27" selection-end-column="27" />
         </state>
       </provider>
     </entry>
