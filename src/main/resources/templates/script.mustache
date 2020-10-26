@@ -73,13 +73,13 @@
 <div id="app">
 
     <div class="container mt-5 pt-5">
-        <button class="btn btn-outline-dark">Нет дозвона</button>
-        <button class="btn btn-outline-dark">Нет интернета</button>
-        <button class="btn btn-outline-dark">Настройка телефона</button>
-        <button class="btn btn-outline-dark">Настройка Модема</button>
-        <button class="btn btn-outline-dark">Настройка Модема</button>
-        <button class="btn btn-outline-dark">Выгодный ТП</button>
-        <button class="btn btn-outline-dark">Продажа</button>
+        <a class="btn btn-outline-dark" href="/script">Нет дозвона</a>
+        <a class="btn btn-outline-dark" href="/internet">Низкая скорость интернета</a>
+        <a class="btn btn-outline-dark" href="/script">Настройка телефона</a>
+        <a class="btn btn-outline-dark" href="/script">Настройка Модема</a>
+        <a class="btn btn-outline-dark" href="/script">Настройка роутера</a>
+        <a class="btn btn-outline-dark" href="/script">Выгодный ТП</a>
+        <a class="btn btn-outline-dark" href="/script">Продажа</a>
 
         <div class="container mt-5">
             <h4>Скрипт "Нет дозвона"</h4>
@@ -102,61 +102,65 @@
                 <p class="font-weight-bold">Уточните у Клиента ответ системы при дозвоне?</p>
                 <button @click="mess4()" class="btn btn-outline-dark">Ответа нет, просто сброс</button>
                 <button @click="mess11" class="btn btn-outline-dark">Короткие гудки, "Абонент занят"</button>
-                <p></p>
                 <button @click="mess112" class="btn btn-outline-dark">Недостаточно средств</button>
                 <button @click="mess113" class="btn btn-outline-dark">Отключен</button>
             </div>
             <br>
             <div v-show ="status3">
-                <p class="font-weight-bold">Проверьте в CRM -> Абонент -> Сетевые настройки: Подключена ли Базовая услуга "Voice"?</p>
-                <button @click="mess5()" class="btn btn-outline-dark">Да, подключена</button>
-                <button @click="mess114" class="btn btn-outline-dark">Нет, не подключена</button>
+                <p class="font-weight-bold">Проверьте в CSRTb -> 3 окно -> Блокировки: Активна ли "Полная блокировка голосовой связи"?</p>
+                <button @click="mess5()" class="btn btn-outline-dark">Нет, не активна</button>
+                <button @click="mess114" class="btn btn-outline-dark">Да, активна</button>
             </div>
             <br>
             <div v-show ="status4">
-                <p class="font-weight-bold">Проверьте в CRM статус номера?</p>
-                <button @click="mess6()" class="btn btn-outline-dark">Активный</button>
-                <button @click="mess115" class="btn btn-outline-dark">Блокирован</button>
-                <button @click="mess116" class="btn btn-outline-dark">В режиме ожидания</button>
-                <button @click="mess117" class="btn btn-outline-dark">Терминирован</button>
+                <p class="font-weight-bold">Проверьте в CSRTb -> 3 окно -> Блокировки: Активны ли другие виды блокировок, влияющие на связь</p>
+                <button @click="mess117" class="btn btn-outline-dark">Да</button>
+                <button @click="mess6()" class="btn btn-outline-dark">Нет</button>
             </div>
             <br>
             <div v-show ="status5">
-                <p class="font-weight-bold">В телефоне отображается пиктограмма антенны?</p>
-                <button @click="mess7()"class="btn btn-outline-dark">Отображается</button>
-                <button @click="mess118()" class="btn btn-outline-dark">Нет значка</button>
+                <p class="font-weight-bold">Проверьте в CSRTb -> Внешние приложения -> Статус номера?</p>
+                <button @click="mess7()" class="btn btn-outline-dark">Активный</button>
+                <button @click="mess115" class="btn btn-outline-dark">Доступен по услуге "Выбор номера"</button>
+                <button @click="mess116" class="btn btn-outline-dark">Не найден, но номер доступен</button>
             </div>
             <br>
             <div v-show ="status6">
-                <p class="font-weight-bold">Уточните откуда обращается Клиент и проверьте покрытие в Бинавигаторе?</p>
-                <button @click="mess8()" class="btn btn-outline-dark">Покрытие есть</button>
-                <button @click="mess119()"class="btn btn-outline-dark">Покрытия нет</button>
+                <p class="font-weight-bold">В телефоне отображается пиктограмма антенны?</p>
+                <button @click="mess8()"class="btn btn-outline-dark">Отображается</button>
+                <button @click="mess118()" class="btn btn-outline-dark">Нет значка</button>
             </div>
             <br>
             <div v-show ="status7">
+                <p class="font-weight-bold">Уточните откуда обращается Клиент и проверьте покрытие в Бинавигаторе?</p>
+                <button @click="mess12	()" class="btn btn-outline-dark">Покрытие есть</button>
+                <button @click="mess119()"class="btn btn-outline-dark">Покрытия нет</button>
+            </div>
+            <br>
+            <div v-show ="status8">
                 <p class="font-weight-bold">Проверьте наличие "Актуального инцидента", "Актуальной проблемы", "Работы на БС" в Биинфо по местонахождению Клиента?</p>
-                <button @click="mess9()" class="btn btn-outline-dark">Нет проблемы</button>
+                <button @click="mess10()" class="btn btn-outline-dark">Нет проблемы</button>
                 <button @click="mess120()" class="btn btn-outline-dark">Есть проблемы</button>
             </div>
             <br>
 
-            <!-- <div v-show ="status8">
+            <!-- <div v-show ="status9">
              <h3>Проверьте наличие "Актуального инцидента", "Актуальной проблемы", "Работы на БС" в Биинфо по местонахождению Клиента?</h3>
-            <button @click="mess9()"> да </button> <label> Нет проблемы?</label>
+            <button @click="mess10()"> да </button> <label> Нет проблемы?</label>
               <br>
               <button @click="mess120()">да</button><label> Есть проблемы?</label>
             </div> -->
 
-            <div v-show ="status9">
+            <div v-show ="status10">
                 <p class="font-weight-bold">Клиент перезагружал аппарат и пересталял сим-карты в другой телефон??</p>
-                <button @click="mess10()" class="btn btn-outline-dark">Перезагружал</button>
+                <button @click="mess11()" class="btn btn-outline-dark">Перезагружал</button>
                 <button @click="mess121()" class="btn btn-outline-dark">Не перегружал</button>
             </div>
             <br>
-            <div v-show ="status10">
-                <p class="font-weight-bold">Проверьте в CRM, оформлен ли ТТ на номере по этой тематике?</p>
+            <div v-show ="status11">
+                <p class="font-weight-bold">Проверьте в SuperOffice, оформлен ли кейс на номере по этой тематике?</p>
                 <button @click="mess123()" class="btn btn-outline-dark">Не оформлен</button>
-                <button @click="mess122()" class="btn btn-outline-dark">Да оформлен</button>
+                <button @click="mess122()" class="btn btn-outline-dark">Да, оформлен</button>
             </div>
             <br>
             <div>
@@ -165,112 +169,120 @@
 
         </div>
     </div>
-</div>
-<br>
-<br>
-<script type="text/javascript">
+    <script type="text/javascript">
 
-    new Vue({
-        el: '#app',
-        data: {
-            message: 'Привет, Vue!',
-            status: false,
-            status2: false,
-            status3: false,
-            status4: false,
-            status5: false,
-            status6: false,
-            status7: false,
-            status8: false,
-            status9: false,
-            status10: false,
-        },
-
-        methods:{
-            mess(){
-                alert("Проблема скорее всего с дозвоном на опеределенный номер, т.к. звонок на *611 идет, либо номер заблокирован по фроду");
+        new Vue({
+            el: '#app',
+            data: {
+                message: 'Привет, Vue!',
+                status: false,
+                status2: false,
+                status3: false,
+                status4: false,
+                status5: false,
+                status6: false,
+                status7: false,
+                status8: false,
+                status9: false,
+                status10: false,
+                status11: false,
             },
 
-            mess1(){
-                alert("Скорее всего этот номер ограничил дозвон с аппарата, либо включил номер абонента в Черный список");
-            },
-            mess11(){
-                alert("Абонент, которому звонит Клиент сейчас разговаривает с другим номером, рекомендуйте позвонить позже. Либо абонент включил номер Клиента в Черный список");
-            },
-            mess112(){
-                alert("Проверьте баланс и пакеты на номере, порекомендуйте Клиенту пополнить баланс");
-            },
-            mess113(){
-                alert("Аппарат вызываемого абонента отключен, порекомендуйте позвонить позже");
-            },
+            methods:{
+                mess(){
+                    alert("Проблема скорее всего с дозвоном на опеределенный номер, т.к. звонок на *611 идет, либо номер заблокирован по фроду");
+                },
 
-            mess114(){
-                alert("Порекомендуйте Клиенту обратиться в ближайший ОПиО для подключения");
-            },
-            mess115(){
-                alert("Исходя из типа блокировки предоставьте Клиенту ОС");
-            },
-            mess116(){
-                alert("Порекомендуйте пополнить баланс и совершить звонок");
-            },
-            mess117(){
-                alert("Проверьте номер в Carem, во вкладке 'Статус номера в CRM', исходя из статуса предоставьте ОС");
-            },
+                mess1(){
+                    alert("Скорее всего этот номер ограничил дозвон с аппарата, либо включил номер абонента в Черный список");
+                },
+                mess11(){
+                    alert("Абонент, которому звонит Клиент сейчас разговаривает с другим номером, рекомендуйте позвонить позже. Либо абонент включил номер Клиента в Черный список");
+                },
+                mess112(){
+                    alert("Проверьте баланс и пакеты на номере, порекомендуйте Клиенту пополнить баланс");
+                },
+                mess113(){
+                    alert("Аппарат вызываемого абонента отключен, порекомендуйте позвонить позже");
+                },
 
-            mess118(){
-                alert("Скорее всего сим-карта повреждена. Порекомендуйте переставить сим-карту в другой телефон, если проблема сохранится, необходимо порекомендовать восстановить сим-карту");
-            },
+                mess114(){
+                    alert("Порекомендуйте Клиенту обратиться в ближайший ОПиО для подключения");
+                },
+                mess115(){
+                    alert("Номер терминирован и доступен для смены по услуге Выбор номера");
+                },
+                mess116(){
+                    alert("Номер сгорел, но, возможно, через некоторое время выйдет на продажу");
+                },
+                mess117(){
+                    alert("Исходя из вида блокировки предоставьте Клиенту ОС");
+                },
 
-            mess119(){
-                alert("Проблема связана с тем, что в селе нет покрытия. Зафиксируйте предложение на установку БС");
-            },
-            mess120(){
-                alert("Проблема связана с актуальной проблемой, по которому ведутся работы со стороны технических специалистов");
-            },
-            mess121(){
-                alert("Порекомендуйте совершить эти действия, т.к. проблемы могут быть в аппарате");
-            },
-            mess122(){
-                alert("Порекомендуйте ожидать решения заявки. Отправьте Клиенту ссылку https://beeline.kg/ru/track, где абонент сам может проверять статус ТТ");
-            },
-            mess123(){
-                alert("Оформите ТТ по тематике: Не могу позвонить/принять звонок/Входящие/Исходящие вызовы/Проблема с качеством связи/соответствующая область, с полным заполнением шаблона. Не забудьте рассказать сроки решения заявки");
-            },
+                mess118(){
+                    alert("Скорее всего сим-карта повреждена. Порекомендуйте переставить сим-карту в другой телефон, если проблема сохранится, необходимо порекомендовать восстановить сим-карту");
+                },
+
+                mess119(){
+                    alert("Проблема связана с тем, что в селе нет покрытия. Зафиксируйте предложение на установку БС");
+                },
+                mess120(){
+                    alert("Проблема связана с актуальной проблемой, по которому ведутся работы со стороны технических специалистов");
+                },
+                mess121(){
+                    alert("Порекомендуйте совершить эти действия, т.к. проблемы могут быть в аппарате");
+                },
+                mess122(){
+                    alert("Порекомендуйте ожидать решения заявки.");
+                },
+                mess123(){
+                    alert("Оформите кейс по тематике: Не могу позвонить/принять звонок/Входящие/Исходящие вызовы/Проблема с качеством связи/соответствующая область, с полным заполнением шаблона. Не забудьте рассказать сроки решения заявки");
+                },
 
 
 
-            mess2(){
-                this.status = true;
-            },
-            mess3(){
-                this.status2 = true;
-            },
-            mess4(){
-                this.status3 = true;
-            },
-            mess5(){
-                this.status4 = true;
-            },
-            mess6(){
-                this.status5 = true;
-            },
-            mess7(){
-                this.status6 = true;
-            },
-            mess8(){
-                this.status7 = true;
-            },
-            mess9(){
-                this.status9 = true;
-            },
-            mess10(){
-                this.status10 = true;
-            },
 
-        }
-    })
+                mess2(){
+                    this.status = true;
+                },
+                mess3(){
+                    this.status2 = true;
+                },
+                mess4(){
+                    this.status3 = true;
+                },
+                mess5(){
+                    this.status4 = true;
+                },
+                mess6(){
+                    this.status5 = true;
+                },
+                mess7(){
+                    this.status6 = true;
+                },
+                mess8(){
+                    this.status7 = true;
+                },
+                mess12(){
+                    this.status8 = true;
+                },
+                mess9(){
+                    this.status9 = true;
+                },
+                mess10(){
+                    this.status10 = true;
+                },
+                mess11(){
+                    this.status11 = true;
+                },
 
-</script>
+
+
+
+            }
+        })
+
+    </script>
 
 </body>
 </html>

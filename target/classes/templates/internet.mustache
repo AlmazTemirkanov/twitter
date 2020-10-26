@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css" >
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script page</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <span class="navbar-brand mb-0 h1">BEENAVIGATOR</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link ml-4" href="/">Главная</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ml-4" href="/map">Карта</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ml-4" href="/content">Провайдеры</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ml-4" href="/vip">VIP</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ml-4" href="/sms">SMS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ml-4" href="/pull">Пулы</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ml-4" href="/privet">Привет+</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    CRM
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/crm">SR Prepaid</a>
+                    <a class="dropdown-item" href="/crmpost">SR Postpaid</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Роуминг
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/prepaid">Роуминг Pre</a>
+                    <a class="dropdown-item" href="/postpaid">Роуминг Post</a>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+<style type="text/css">
+    body {
+        background-color: #f4f5ed;
+    }
+</style>
+
+<div id="app">
+
+    <div class="container mt-5 pt-5">
+        <a class="btn btn-outline-dark" href="/script">Нет дозвона</a>
+        <a class="btn btn-outline-dark" href="/internet">Низкая скорость интернета</a>
+        <a class="btn btn-outline-dark" href="/script">Настройка телефона</a>
+        <a class="btn btn-outline-dark" href="/script">Настройка Модема</a>
+        <a class="btn btn-outline-dark" href="/script">Настройка роутера</a>
+        <a class="btn btn-outline-dark" href="/script">Выгодный ТП</a>
+        <a class="btn btn-outline-dark" href="/script">Продажа</a>
+
+        <div class="container mt-5">
+            <h4>Скрипт "Низкая скорость интернета"</h4>
+            <br>
+
+            <p class="font-weight-bold">На каком номере наблюдается проблема?</p>
+            <button @click="mess21" class="btn btn-outline-dark">На номере, с которого звонит</button>
+            <button @click="mess21" class="btn btn-outline-dark">На другом номере</button>
+            <br>
+            <br>
+
+            <div v-show ="status1">
+                <p class="font-weight-bold">Уточните откуда обращается Клиент и проверьте покрытие в Бинавигаторе?</p>
+                <button @click="mess22()" class="btn btn-outline-dark">Есть покрытие 3G или 4G</button>
+                <button @click="mess11()" class="btn btn-outline-dark">2G или слабый 3G</button>
+                <p></p>
+                <button @click="mess12" class="btn btn-outline-dark">Населенный пункт не найден</button>
+                <button @click="mess1" class="btn btn-outline-dark">Нет покрытия или слабый 2G</button>
+            </div>
+            <br>
+            <div v-show ="status2">
+                <p class="font-weight-bold">Проверьте загруженность в SmartCare по номеру Клиента?</p>
+                <button @click="mess1" class="btn btn-outline-dark">Загружено (60-100)</button>
+                <button @click="mess24" class="btn btn-outline-dark">Загруженности по БС нет (1-60)</button>
+                <p></p>
+                <button @click="mess14" class="btn btn-outline-dark">Планируется установка</button>
+                <button @click="mess15" class="btn btn-outline-dark">Абонент не зарегистрирован в сети</button>
+                <button @click="mess23" class="btn btn-outline-dark">В SmartCare нет данных</button>
+            </div>
+            <br>
+            <div v-show ="status3">
+                <p class="font-weight-bold">Проверьте по номеру загруженность в Carem, во вкладке "Загруженность БС"?</p>
+                <button @click="mess1" class="btn btn-outline-dark">Загружен</button>
+                <button @click="mess24" class="btn btn-outline-dark">Не загружен или нет информации</button>
+            </div>
+            <br>
+            <div v-show ="status4">
+                <p class="font-weight-bold">Проверьте подключен ли FUP в CSRTb: 4 окно -> Аккумуляторы -> Пороги и счетчики. "Значение счетчика" больше чем "Порог: значение"?</p>
+                <button @click="mess25" class="btn btn-outline-dark">Да</button>
+                <button @click="mess26" class="btn btn-outline-dark">Нет</button>
+
+            </div>
+            <br>
+            <div v-show ="status5">
+                <p class="font-weight-bold">Уточните время наблюдения проблемы и проверьте тариф Клиента?</p>
+                <button @click="mess16()"class="btn btn-outline-dark">С 20:00 до 01:00, на ТП нет безлимитного интернета</button>
+                <button @click="mess16()" class="btn btn-outline-dark">В любое время, на ТП есть безлимитный интернет</button>
+                <p></p>
+                <button @click="mess26()" class="btn btn-outline-dark">С 01:00 до 20:00, на ТП нет безлимитного интернета</button>
+            </div>
+            <br>
+
+            <div v-show ="status6">
+                <p class="font-weight-bold">Уточните, модель аппарата и поддерживаемость нашей сети в Smartcare и в телефоне рядом со значком антенны какая пиктограмма отображается, есть ли также стрелки направленные вверх и вних?</p>
+                <button @click="mess17" class="btn btn-outline-dark">Пиктограммы нет, но стрелки есть</button>
+                <button @click="mess17"class="btn btn-outline-dark">Пиктограмма Е, стрелки есть</button>
+                <p></p>
+                <button @click="mess27" class="btn btn-outline-dark">3G/4G/H/H+/LTE, стрелки есть</button>
+                <button @click="mess18"class="btn btn-outline-dark">Нет ни пиктограммы, ни стрелок</button>
+            </div>
+            <br>
+            <div v-show ="status7">
+                <p class="font-weight-bold">Проверьте наличие "Актуального инцидента", "Актуальной проблемы", "Работы на БС" в Биинфо по местонахождению Клиента?</p>
+                <button @click="mess28" class="btn btn-outline-dark">Нет проблемы</button>
+                <button @click="mess20" class="btn btn-outline-dark">Есть проблемы</button>
+            </div>
+            <br>
+            <div v-show ="status8">
+                <p class="font-weight-bold">Проверьте в SuperOffice, оформлен ли Кейс на номере по этой тематике?</p>
+                <button @click="mess201" class="btn btn-outline-dark">Не оформлен</button>
+                <button @click="mess200" class="btn btn-outline-dark">Да оформлен</button>
+            </div>
+            <br>
+
+            <button onClick="window.location.reload();" class="btn btn-outline-success">Обновить</button>
+        </div>
+
+    </div>
+</div>
+</div>
+<br>
+<br>
+<script type="text/javascript">
+
+    new Vue({
+        el: '#app',
+        data: {
+            message: 'Привет, Vue!',
+            status1: false,
+            status2: false,
+            status3: false,
+            status4: false,
+            status5: false,
+            status6: false,
+            status7: false,
+            status8: false,
+            status9: false,
+            status10: false,
+
+        },
+
+        methods:{
+            mess1(){
+                alert("Кейс принимать не нужно. До установки БС ситуация не наладится. Нужно проверить, планируется ли установка БС и сообщить Клиенту. Если планируется – значит сектор загружен и планируется установка БС. Сообщить об этом и попросить подождать.Если не планируется – ответить по шаблону и принять предложение на установку БС.");
+            },
+
+            mess11(){
+                alert("Нужно проверить, планируется ли установка БС и сообщить Клиенту.- Планируется – значит сектор загружен и планируется установка БС. Сообщить об этом и попросить подождать.- Не планируется – ответить по шаблону и принять предложение на установку БС.");
+            },
+
+            mess12(){
+                alert("При отсутствии села в карте по всем названиям, необходимо принять Кейс по шаблону «Интернет->Низкая скорость. Почему?->Отсутствие/расхождение инфо в биинавигатор->cоответствующая область»");
+            },
+
+            mess13(){
+                alert("Кейс оформлять не нужно. Нужно ответить по шаблону. Также надо проверить, планируется ли установка БС и сообщить Клиенту. Если планируется – значит сектор загружен и планируется установка БС. Сообщить об этом и попросить подождать. Если не планируется – ответить по шаблону и принять предложение на установку БС.");
+            },
+
+            mess14(){
+                alert("БС загружена и планируется установка новой БС в текущем году. Кейс оформлять и предложение принимать не нужно.");
+            },
+
+            mess15(){
+                alert("Необходимо проверить другие номера, которые находятся там же, пока по одному из них не выйдет один из вышеперечисленных трех ответов. Если номеров больше для проверки нет, то оформляйте Кейс на низкую скорость и в строке про загруженность так и пишите, что по номерам вышел ответ «Абонент не зарегистрирован в сети».");
+            },
+            mess16(){
+
+                alert("На номере Клиента применена политика FUP. Отвечаем по шаблону: По Вашему номеру применена  политика справедливого пользования интернет трафиком с целью обеспечения комфортного доступа в интернет всем абонентам компании, которая подразумевает справедливое распределение сетевых ресурсов в часы наибольшей нагрузки. Если в течение расчетного периода (со дня последнего списания абонентской платы) абонент использует аномально большой объем интернета и причиняет неудобства для других абонентов, система будет снижать приоритет доступа в интернет до следующего списания абонентской платы (до конца расчетного периода). Со дня списания очередной абонентской платы приоритет доступа в интернет автоматически восстанавливается. Основным преимуществом такого подхода является то, что ресурсы сети справедливо распределяются между всеми абонентами и предоставляется максимальная возможная скорость.");
+            },
+            mess17(){
+                alert("Помогите Клиенту в настройках выбрать сеть 3G/4G. Настройки -> Режим сети/Тип сети -> Автоматический режим/ Предпочтительно 4G/3G. Если в телефоне Клиента нет таких разделов, уточните в каком слоте сим-карта, если во втором, то порекомендуйте переставить сим-карту в первый слот. Если сим-карта в первом слоте, то скорее всего аппарат абонента не поддерживает 4G/3G, порекомендуйте переставить сим-карту в другой аппарат");
+            },
+
+            mess18(){
+                alert("Уточните, включена ли на аппарте передача данных, если да то обработайте обращение по тематике 'Нет выхода в интернет'");
+            },
+            mess19(){
+                alert("Помогите Клиенту в настройках выбрать сеть 3G/4G. Настройки -> Режим сети/Тип сети -> Автоматический режим/ Предпочтительно 4G/3G. Если в телефоне Клиента нет таких разделов, уточните в каком слоте сим-карта, если во втором, то порекомендуйте переставить сим-карту в первый слот. Если сим-карта в первом слоте, то скорее всего аппарат абонента не поддерживает 4G/3G, порекомендуйте переставить сим-карту в другой аппарат");
+            },
+            mess20(){
+                alert("Проблема связана с актуальной проблемой, по которому ведутся работы со стороны технических специалистов");
+            },
+            mess200(){
+                alert("Порекомендуйте ожидать решения заявки");
+            },
+            mess201(){
+                alert("Оформите Кейс по тематике: Интернет/Низкая скорость. Почему?/Оформлен Кейс/соответствующая область, с полным заполнением шаблона. Не забудьте рассказать сроки решения заявки");
+            },
+
+
+
+
+
+
+
+
+
+
+            mess21(){
+                this.status1 = true;
+            },
+            mess22(){
+                this.status2 = true;
+            },
+            mess23(){
+                this.status3 = true;
+            },
+            mess24(){
+                this.status4 = true;
+            },
+            mess25(){
+                this.status5 = true;
+            },
+            mess26(){
+                this.status6 = true;
+            },
+            mess27(){
+                this.status7 = true;
+            },
+            mess28(){
+                this.status8 = true;
+            },
+            mess29(){
+                this.status9 = true;
+            },
+
+
+
+
+        }
+    })
+
+</script>
+
+</body>
+</html>

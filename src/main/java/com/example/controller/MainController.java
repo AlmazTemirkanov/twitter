@@ -132,6 +132,11 @@ public class MainController {
         return "office";
     }
 
+    @GetMapping("/internet")
+    public String internet(Map<String, Object> model) {
+        return "internet";
+    }
+
 }
 
 
