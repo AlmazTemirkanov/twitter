@@ -2,7 +2,6 @@ package com.example.controller;
 
 import com.example.domain.Content;
 import com.example.repo.ContentRepo;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -12,8 +11,11 @@ import java.util.Map;
 @Controller
 public class ContentController {
 
-    @Autowired
-    private ContentRepo contentRepo;
+    private final ContentRepo contentRepo;
+
+    public ContentController(ContentRepo contentRepo) {
+        this.contentRepo = contentRepo;
+    }
 
     @GetMapping("/content")
     public String filter_content (@RequestParam (required = false) String filter_content, Model model ) {

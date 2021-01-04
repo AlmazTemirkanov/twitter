@@ -30,7 +30,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         "/css/**",
                         "/js/**",
                         "/img/**",
-                    "/filter_privet", "/filter_title", "/content_name", "/content", "/filter_content", "/vip").permitAll()
+                    "/filter_privet", "/fraud","/perebros", "/perebros_ds","/filter_title", "/content_name", "/content", "/filter_content", "/vip").permitAll()
                 .anyRequest().authenticated()
                 .and()
                     .formLogin()

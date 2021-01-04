@@ -115,28 +115,34 @@ public class MainController {
 
         return "admin";
     }
-
-
     @GetMapping("/vip")
     public String vip(Map<String, Object> model) {
         return "vip";
     }
-
     @GetMapping("/script")
     public String script(Map<String, Object> model) {
         return "script";
     }
-
     @GetMapping("/office")
     public String office(Map<String, Object> model) {
         return "office";
     }
-
     @GetMapping("/internet")
     public String internet(Map<String, Object> model) {
         return "internet";
     }
-
+    @GetMapping("/fraud")
+    public String fraud(Map<String, Object> model) {
+        return "fraud";
+    }
+    @GetMapping("/perebros")
+    public String perebros(Map<String, Object> model) {
+        return "perebros";
+    }
+    @GetMapping("/perebros_ds")
+    public String perebros_ds(Map<String, Object> model) {
+        return "perebros_ds";
+    }
 }
 
 

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css" >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script page</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <span class="navbar-brand mb-0 h1">BEENAVIGATOR</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link ml-4" href="/">Главная</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ml-4" href="/map">Карта</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ml-4" href="/content">Провайдеры</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ml-4" href="/vip">VIP</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ml-4" href="/sms">SMS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ml-4" href="/pull">Пулы</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ml-4" href="/privet">Привет+</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    CRM
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/crm">SR Prepaid</a>
+                    <a class="dropdown-item" href="/crmpost">SR Postpaid</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Роуминг
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/prepaid">Роуминг Pre</a>
+                    <a class="dropdown-item" href="/postpaid">Роуминг Post</a>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+<style type="text/css">
+    body {
+        background-color: #f4f5ed;
+    }
+</style>
+
+<div id="app">
+
+    <div class="container mt-5 pt-5">
+        <a class="btn btn-outline-dark" href="/script">Нет дозвона</a>
+        <a class="btn btn-outline-dark" href="/internet">Низкая скорость интернета</a>
+        <a class="btn btn-outline-dark" href="/fraud">Блокировка по фроду</a>
+        <a class="btn btn-outline-dark" href="/perebros">Процедура переброса 106</a>
+        <a class="btn btn-outline-dark" href="/perebros_ds">Переброс ДС</a>
+
+
+        <div class="container mt-5">
+            <h4>Скрипт по тематике "Блокировка по Фроду"</h4>
+            <br>
+
+            <p class="font-weight-bold">В CSRTb, в разделе Блокировки, какая блокировка активна?</p>
+
+            <button @click="mess1()" class="btn btn-outline-dark">Блокировка По Фроду 1/Блокировка По Фроду 5</button>
+            <button @click="mess21()" class="btn btn-outline-dark">Блокировка По Фроду 2/Блокировка По Фроду 3/Блокировка По Фроду 4</button>
+            </p>
+            <button @click="mess116()" class="btn btn-outline-dark">Другая блокировка</button>
+            <br>
+            <br>
+
+            <div v-show ="status1">
+                <p class="font-weight-bold">В MEMO, через фильтр выбираем Блокировки и дата 90 дней до блокировки , периодичность блокировки: первичная или вторичная?</p>
+                <button @click="mess22()" class="btn btn-outline-dark">Первичная блокировка</button>
+                <button @click="mess11()" class="btn btn-outline-dark">Вторичная блокировка</button>
+            </div>
+            <br>
+
+            <div v-show ="status2">
+                <p class="font-weight-bold">С какого номера обращается абонент?</p>
+                <button @click="mess23()" class="btn btn-outline-dark">С заблокированного номера</button>
+                <button @click="mess24()" class="btn btn-outline-dark">С другого номера</button>
+            </div>
+            <br>
+
+            <div v-show ="status3">
+                <p class="font-weight-bold">Переставлял сим-карту?</p>
+                <button @click="mess25()" class="btn btn-outline-dark">Да, переставлял</button>
+                <button @click="mess115()" class="btn btn-outline-dark">Нет, не переставлял</button>
+            </div>
+            <br>
+
+            <div v-show ="status4">
+                <p class="font-weight-bold">Абонент может сказать IMEI телефона и заблокированный номер?</p>
+                <button @click="mess12()"class="btn btn-outline-dark">Да, называет</button>
+                <button @click="mess114()" class="btn btn-outline-dark">Нет, не называет</button>
+            </div>
+            <br>
+
+            <div v-show ="status5">
+                <p class="font-weight-bold">Абонент может сказать IMEI того телефона, в котором был заблокирован номер?</p>
+                <button @click="mess12()" class="btn btn-outline-dark">Да, называет</button>
+                <button @click="mess26()" class="btn btn-outline-dark">Нет, не может назвать</button>
+            </div>
+            <br>
+
+            <div v-show ="status6">
+                <p class="font-weight-bold">Сколько прошло со дня блокировки?</p>
+                <button @click="mess12()" class="btn btn-outline-dark">Больше недели</button>
+                <button @click="mess113()" class="btn btn-outline-dark">Меньше недели</button>
+            </div>
+            <br>
+
+
+            <button onClick="window.location.reload();" class="btn btn-outline-success">Обновить</button>
+        </div>
+
+    </div>
+</div>
+</div>
+<br>
+<br>
+<script type="text/javascript">
+
+    new Vue({
+        el: '#app',
+        data: {
+            message: 'Привет, Vue!',
+            status1: false,
+            status2: false,
+            status3: false,
+            status4: false,
+            status5: false,
+            status6: false,
+        },
+
+        methods:{
+            mess1(){
+                Swal.fire("По этим видам блокировок нельзя самостоятельно разблокировать. Абонента сразу необходимо направлять в ОПиО (без перевода на Save, без отписывания письма). Интеракция: Услуги->Админ. Услуги->Блокировка по ФРОДу->Клиент направлен в ОПиО");
+            },
+
+            mess11(){
+                Swal.fire("Необходимо перевести звонок на линию Save. При переводе гарантировать или обещать разблокировать нельзя, т.к. ЭОК может разблокировать только после получения разрешения со стороны отдела фрода. Если Клиент обращается, когда перевод на Save закрыт, т.е. с 1:55 до 8:00 ч., то нужно оформлять кейс. Обязательное условия *Клиент должен звонить с заблокированного номера* тут тоже сохраняется. Обязательно нужно указывать контактный номер, т.к. на заблокированный номер нельзя позвонить. Кейс: Информация о компании/сервисы/КЦ/Кейс Save/");
+            },
+            mess12(){
+                Swal.fire("1. Разблокировать, 2. Компенсация (1000 мин внутри сети или 5 Гб интернета), 3. Интеракция: Услуги->Админ. Услуги->Блокировка по ФРОДу-> Блокировка по фроду: разблокирован (указать IMEI телефона), 4. Интеракция по компенсации");
+            },
+            mess113(){
+                Swal.fire("1. Необходимо клиенту уточнить IMEI и перезвонить или подойти в ОПиО с паспортом, 2. Интеракция: Услуги/Админ. услуги/Блокировка по ФРОДу/Отказано: не назван IMEI");
+            },
+            mess114(){
+                Swal.fire("В ОПиО с паспортом. Интеракция: Услуги->Админ. Услуги->Блокировка по ФРОДу->Клиент направлен в ОПиО");
+            },
+
+            mess115(){
+                Swal.fire("1. Разблокировать, 2. Компенсация (1000 мин внутри сети или 5 Гб интернета), 3. Интеракция: Услуги->Админ. Услуги->Блокировка по ФРОДу-> Блокировка по фроду: разблокирован, 4. Интеракция по компенсации");
+            },
+            mess116(){
+                Swal.fire("Этот тип блокировки не относится к ФРОДу");
+            },
+
+
+
+
+            mess21(){
+                this.status1 = true;
+            },
+            mess22(){
+                this.status2 = true;
+            },
+            mess23(){
+                this.status3 = true;
+                this.status4 = false;
+            },
+            mess24(){
+                this.status4 = true;
+                this.status3 = false;
+                this.status5 = false;
+                this.status6 = false;
+            },
+            mess25(){
+                this.status5 = true;
+            },
+            mess26(){
+                this.status6 = true;
+            },
+
+
+        }
+    })
+
+</script>
+<!-- Подключаем jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Подключаем Bootstrap JS -->
+<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

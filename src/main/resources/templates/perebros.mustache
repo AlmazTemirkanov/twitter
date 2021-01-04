@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css" >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script page</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <span class="navbar-brand mb-0 h1">BEENAVIGATOR</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link ml-4" href="/">Главная</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ml-4" href="/map">Карта</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ml-4" href="/content">Провайдеры</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ml-4" href="/vip">VIP</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ml-4" href="/sms">SMS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ml-4" href="/pull">Пулы</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ml-4" href="/privet">Привет+</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    CRM
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/crm">SR Prepaid</a>
+                    <a class="dropdown-item" href="/crmpost">SR Postpaid</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Роуминг
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/prepaid">Роуминг Pre</a>
+                    <a class="dropdown-item" href="/postpaid">Роуминг Post</a>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+<style type="text/css">
+    body {
+        background-color: #f4f5ed;
+    }
+</style>
+
+<div id="app">
+
+    <div class="container mt-5 pt-5">
+        <a class="btn btn-outline-dark" href="/script">Нет дозвона</a>
+        <a class="btn btn-outline-dark" href="/internet">Низкая скорость интернета</a>
+        <a class="btn btn-outline-dark" href="/fraud">Блокировка по фроду</a>
+        <a class="btn btn-outline-dark" href="/perebros">Процедура переброса 106</a>
+        <a class="btn btn-outline-dark" href="/perebros_ds">Переброс ДС</a>
+
+
+        <div class="container mt-5">
+            <h4>Скрипт по тематике "Процедура переброса ДС по 106-статусу"</h4>
+            <br>
+
+            <p class="font-weight-bold">Статус платежа в ЕСПП (UPS)?</p>
+
+            <button @click="mess2" class="btn btn-outline-dark">106 платеж на ненайденный номер</button>
+            <button @click="mess()" class="btn btn-outline-dark">Другой статус</button>
+            <br>
+            <br>
+
+            <div v-show ="status">
+                <p class="font-weight-bold">Отличие корректного от некорректного номера?</p>
+                <button @click="mess3" class="btn btn-outline-dark">Не более чем в 2-х цифрах включительно</button>
+                <button @click="mess1()" class="btn btn-outline-dark">Более чем в 2-х цифрах</button>
+            </div>
+            <br>
+            <div v-show ="status2">
+                <p class="font-weight-bold">Сколько времени прошло с момента пополнения?</p>
+                <button @click="mess4()" class="btn btn-outline-dark">Менее 72х часов</button>
+                <button @click="mess1" class="btn btn-outline-dark">Более 72х часов но не более 30 дней</button>
+                <button @click="mess112" class="btn btn-outline-dark">Более 30ти дней до 3х лет </button>
+            </div>
+            <br>
+            <div v-show ="status3">
+                <p class="font-weight-bold">В каком статусе находился ошибочный номер на момент пополнения?</p>
+                <button @click="mess5()" class="btn btn-outline-dark">Терминирован</button>
+                <button @click="mess116" class="btn btn-outline-dark">Начальный статус</button>
+                <button @click="mess113" class="btn btn-outline-dark">Активный</button>
+            </div>
+            <br>
+            <div v-show ="status4">
+                <p class="font-weight-bold">На какую сумму был совершен платеж?</p>
+                <button @click="mess115" class="btn btn-outline-dark">Не более 500 сомов (включительно);</button>
+                <button @click="mess114" class="btn btn-outline-dark">Более 500 сомов</button>
+            </div>
+            <br>
+
+            <div>
+                <button onClick="window.location.reload();" class="btn btn-outline-success">Обновить</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    new Vue({
+        el: '#app',
+        data: {
+            message: 'Привет, Vue!',
+            status: false,
+            status2: false,
+            status3: false,
+            status4: false,
+        },
+
+        methods:{
+            mess(){
+                Swal.fire("Действуем согласно процедуре в Биинфо");
+            },
+
+            mess1(){
+                Swal.fire("Создаем Кейс: Баланс номера/пополнение на терминированные и неактивированные номера/переброс. Необходимо запросить чек об оплате на номер WhatsApp 0770004241 (с обязательным заполнением шаблона)");
+            },
+            mess11(){
+                Swal.fire("Абонент, которому звонит Клиент сейчас разговаривает с другим номером, рекомендуйте позвонить позже. Либо абонент включил номер Клиента в Черный список");
+            },
+            mess112(){
+                Swal.fire("Отправляем в ОПИО для написания письменного заявления (при себе необходимо иметь документ удостоверяющий личность и чек)");
+            },
+            mess113(){
+                Swal.fire("Оформляем кейс: Баланс номера/не поступают средства ЕСПП/Некорректная работа. Необходим запросить чек об оплате на номер WhatsApp 0770004241 (с обязательным заполнением шаблона)");
+            },
+
+            mess114(){
+                Swal.fire("Оформляем Кейс: Баланс номера/пополнение на терминированные и неактивированные номера/переброс Необходим запросить чек об оплате на номер WhatsApp 0770004241 (с обязательным заполнением шаблона)");
+            },
+            mess115(){
+                Swal.fire("Переводим звонок на линию 6611 по номеру 86007. Интеракцию:Баланс номера/Вопросы по 6611/Перевод звонка/");
+            },
+            mess116(){
+                Swal.fire("Необходимо активировать номер и после этого перезвонить на линию 6611 для совершения переброса");
+            },
+            mess2(){
+                this.status = true;
+            },
+            mess3(){
+                this.status2 = true;
+            },
+            mess4(){
+                this.status3 = true;
+            },
+            mess5(){
+                this.status4 = true;
+            },
+        }
+    })
+
+</script>
+<!-- Подключаем jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Подключаем Bootstrap JS -->
+<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>
