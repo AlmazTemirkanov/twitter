@@ -141,8 +141,9 @@ public class MainController {
     }
     @GetMapping("/perebros_ds")
     public String perebros_ds(Map<String, Object> model) {
-        return "perebros_ds";
+        return "/perebros_ds";
     }
+
 }
 
 

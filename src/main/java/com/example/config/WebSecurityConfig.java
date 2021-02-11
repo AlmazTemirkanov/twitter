@@ -26,11 +26,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/", "/registration", "/main", "/filter", "/prepaid", "/postpaid",
                                         "/filter_postpaid", "/filter_prepaid", "/privet", "/office",
                                         "/sms", "/filter_sms", "/filter_pull", "/filter_crmpost", "/crmpost",
-                                        "/pull", "/map", "/crm", "/internet", "/filter_crm","/calc", "/game_one", "/game_two", "/script",
+                                        "/pull", "/map", "/crm", "/internet", "/filter_crm","/calc", "/game_one",
+                        "/game_two", "/script",
                         "/css/**",
                         "/js/**",
                         "/img/**",
-                    "/filter_privet", "/fraud","/perebros", "/perebros_ds","/filter_title", "/content_name", "/content", "/filter_content", "/vip").permitAll()
+                    "/filter_privet", "/fraud","/perebros", "/perebros_ds","/filter_title", "/content_name",
+                        "/content", "/filter_content", "/vip", "/script_text").permitAll()
                 .anyRequest().authenticated()
                 .and()
                     .formLogin()
