@@ -3,6 +3,7 @@ C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\controller\UserCon
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\repo\SMSRepo.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\config\WebSecurityConfig.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\domain\Pull.java
+C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\controller\TextController.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\controller\ContentController.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\repo\CRMRepo.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\repo\PrivetRepo.java
@@ -20,6 +21,7 @@ C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\domain\Content.jav
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\controller\CRMController.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\domain\Prepaid.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\repo\ContentRepo.java
+C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\domain\Text.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\config\MvcConfig.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\domain\Role.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\controller\RestController.java
@@ -33,5 +35,6 @@ C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\repo\PostpaidRepo.
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\controller\ErrorController.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\controller\RegistrationController.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\controller\PostpaidController.java
+C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\repo\TextRepo.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\controller\SMSController.java
 C:\Users\Almaz\IdeaProjects\twitter\src\main\java\com\example\repo\CRMPostRepo.java

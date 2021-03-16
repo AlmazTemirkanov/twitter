@@ -77,174 +77,174 @@
         <a class="btn btn-outline-dark" href="/internet">Низкая скорость интернета</a>
         <a class="btn btn-outline-dark" href="/fraud">Блокировка по фроду</a>
         <a class="btn btn-outline-dark" href="/perebros">Процедура переброса 106</a>
-        <a class="btn btn-outline-dark" href="/perebros_ds">Переброс ДС</a>
-
-
-        <div class="container mt-5">
-            <h4>Скрипт "Процедура переброса ДС"</h4>
-            <br>
-            <p class="font-weight-bold">Какой статус в ЕСПП(UPS) на ошибочном номере?</p>
-            <button @click="mess2()" class="btn btn-outline-dark">Платеж успешно завершен</button>
-            <button @click="mess()" class="btn btn-outline-dark">106 Платеж подтвержден на ненайденный номер</button>
-            <br>
-            <br>
-            <div v-show ="status">
-                <p class="font-weight-bold">На каком сегменте обслуживается некорректный номер?</p>
-                <button @click="mess3()" class="btn btn-outline-dark">Prepaid</button>
-                <button @click="mess1()" class="btn btn-outline-dark">Postpaid</button>
-            </div>
-            <br>
-            <div v-show ="status2">
-                <p class="font-weight-bold">Сколько отличий между номерами?</p>
-                <button @click="mess5()" class="btn btn-outline-dark">Не более чем в 2х цифрах</button>
-                <button @click="mess4()" class="btn btn-outline-dark">Более чем в 2х цифрах</button>
-            </div>
-            <br>
-            <div v-show ="status3">
-                <p class="font-weight-bold">Есть чек в наличии?</p>
-                <button @click="mess112" class="btn btn-outline-dark">Да</button>
-                <button @click="mess120()" class="btn btn-outline-dark">Нет</button>
-            </div>
-            <br>
-            <div v-show ="status4">
-                <p class="font-weight-bold">На какую сумму ошибочно пополнили?</p>
-                <button @click="mess6()" class="btn btn-outline-dark">Менее 500 сом</button>
-                <button @click="mess113" class="btn btn-outline-dark">Более 500 сом</button>
-            </div>
-            <br>
-            <div v-show ="status5">
-                <p class="font-weight-bold">Сколько ДС имеется на ошибочном номере?</p>
-                <button @click="mess7()" class="btn btn-outline-dark">Имеется вся сумма или частично</button>
-                <button @click="mess114" class="btn btn-outline-dark">Все средства израсходованы </button>
-            </div>
-            <br>
-            <div v-show ="status6">
-                <p class="font-weight-bold">Сколько времени прошло после ошибочного пополнения?</p>
-                <button @click="mess8()" class="btn btn-outline-dark">Прошло менее 72х часов</button>
-                <button @click="mess116" class="btn btn-outline-dark">Прошло более 72х часов</button>
-            </div>
-            <br>
-            <div v-show ="status7">
-                <p class="font-weight-bold">Проверить на ошибочном номере перебросы за последние 3-е суток?</p>
-                <button @click="mess12()"class="btn btn-outline-dark">Не совершались</button>
-                <button @click="mess117" class="btn btn-outline-dark">Были другие пополнения</button>
-            </div>
-            <br>
-            <div v-show ="status8">
-                <p class="font-weight-bold">Были ли другие пополнения на ошибочном номере за последние календарные сутки?</p>
-                <button @click="mess14"class="btn btn-outline-dark">Не совершались пополнения</button>
-                <button @click="mess117" class="btn btn-outline-dark">Были другие пополнения</button>
-            </div>
-            <br>
-            <div v-show ="status9">
-                <p class="font-weight-bold">1-го числа каждого месяца после 00:00 часов переброс платежа за предыдущий день будет невозможен. Пополнение было совершено за текущий календарный месяц?</p>
-                <button @click="mess118" class="btn btn-outline-dark">За текущий календарный месяц</button>
-                <button @click="mess119"class="btn btn-outline-dark">За предыдущий календарный месяц</button>
-            </div>
-            <br>
-            <div>
-                <button onClick="window.location.reload();" class="btn btn-outline-success">Обновить</button>
-            </div>
-
-        </div>
+        <!--<a class="btn btn-outline-dark" href="/perebros_ds">Переброс ДС</a>-->
     </div>
-</div>
-<script type="text/javascript">
 
-    new Vue({
-        el: '#app',
-        data: {
-            message: 'Привет, Vue!',
-            status: false,
-            status2: false,
-            status3: false,
-            status4: false,
-            status5: false,
-            status6: false,
-            status7: false,
-            status8: false,
-            status9: false,
-        },
+        <!--<div class="container mt-5">-->
+            <!--<h4>Скрипт "Процедура переброса ДС"</h4>-->
+            <!--<br>-->
+            <!--<p class="font-weight-bold">Какой статус в ЕСПП(UPS) на ошибочном номере?</p>-->
+            <!--<button @click="mess2()" class="btn btn-outline-dark">Платеж успешно завершен</button>-->
+            <!--<button @click="mess()" class="btn btn-outline-dark">106 Платеж подтвержден на ненайденный номер</button>-->
+            <!--<br>-->
+            <!--<br>-->
+            <!--<div v-show ="status">-->
+                <!--<p class="font-weight-bold">На каком сегменте обслуживается некорректный номер?</p>-->
+                <!--<button @click="mess3()" class="btn btn-outline-dark">Prepaid</button>-->
+                <!--<button @click="mess1()" class="btn btn-outline-dark">Postpaid</button>-->
+            <!--</div>-->
+            <!--<br>-->
+            <!--<div v-show ="status2">-->
+                <!--<p class="font-weight-bold">Сколько отличий между номерами?</p>-->
+                <!--<button @click="mess5()" class="btn btn-outline-dark">Не более чем в 2х цифрах</button>-->
+                <!--<button @click="mess4()" class="btn btn-outline-dark">Более чем в 2х цифрах</button>-->
+            <!--</div>-->
+            <!--<br>-->
+            <!--<div v-show ="status3">-->
+                <!--<p class="font-weight-bold">Есть чек в наличии?</p>-->
+                <!--<button @click="mess112" class="btn btn-outline-dark">Да</button>-->
+                <!--<button @click="mess120()" class="btn btn-outline-dark">Нет</button>-->
+            <!--</div>-->
+            <!--<br>-->
+            <!--<div v-show ="status4">-->
+                <!--<p class="font-weight-bold">На какую сумму ошибочно пополнили?</p>-->
+                <!--<button @click="mess6()" class="btn btn-outline-dark">Менее 500 сом</button>-->
+                <!--<button @click="mess113" class="btn btn-outline-dark">Более 500 сом</button>-->
+            <!--</div>-->
+            <!--<br>-->
+            <!--<div v-show ="status5">-->
+                <!--<p class="font-weight-bold">Сколько ДС имеется на ошибочном номере?</p>-->
+                <!--<button @click="mess7()" class="btn btn-outline-dark">Имеется вся сумма или частично</button>-->
+                <!--<button @click="mess114" class="btn btn-outline-dark">Все средства израсходованы </button>-->
+            <!--</div>-->
+            <!--<br>-->
+            <!--<div v-show ="status6">-->
+                <!--<p class="font-weight-bold">Сколько времени прошло после ошибочного пополнения?</p>-->
+                <!--<button @click="mess8()" class="btn btn-outline-dark">Прошло менее 72х часов</button>-->
+                <!--<button @click="mess116" class="btn btn-outline-dark">Прошло более 72х часов</button>-->
+            <!--</div>-->
+            <!--<br>-->
+            <!--<div v-show ="status7">-->
+                <!--<p class="font-weight-bold">Проверить на ошибочном номере перебросы за последние 3-е суток?</p>-->
+                <!--<button @click="mess12()"class="btn btn-outline-dark">Не совершались</button>-->
+                <!--<button @click="mess117" class="btn btn-outline-dark">Были другие пополнения</button>-->
+            <!--</div>-->
+            <!--<br>-->
+            <!--<div v-show ="status8">-->
+                <!--<p class="font-weight-bold">Были ли другие пополнения на ошибочном номере за последние календарные сутки?</p>-->
+                <!--<button @click="mess14"class="btn btn-outline-dark">Не совершались пополнения</button>-->
+                <!--<button @click="mess117" class="btn btn-outline-dark">Были другие пополнения</button>-->
+            <!--</div>-->
+            <!--<br>-->
+            <!--<div v-show ="status9">-->
+                <!--<p class="font-weight-bold">1-го числа каждого месяца после 00:00 часов переброс платежа за предыдущий день будет невозможен. Пополнение было совершено за текущий календарный месяц?</p>-->
+                <!--<button @click="mess118" class="btn btn-outline-dark">За текущий календарный месяц</button>-->
+                <!--<button @click="mess119"class="btn btn-outline-dark">За предыдущий календарный месяц</button>-->
+            <!--</div>-->
+            <!--<br>-->
+            <!--<div>-->
+                <!--<button onClick="window.location.reload();" class="btn btn-outline-success">Обновить</button>-->
+            <!--</div>-->
 
-        methods:{
-            mess(){
-                Swal.fire("Действуем согласно процедуре по перебросу средств при поплнении на терминированный или неактивированный номер");
-            },
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<!--<script type="text/javascript">-->
 
-            mess1(){
-                Swal.fire("Действуем по процедуре отмены платежа Ошибся номером PostPaid Интеракция: Баланс номера/Переброс баланса/Недоступно по условиям/");
-            },
-            mess120(){
-                Swal.fire("Отправляем по месту поплнения Интеракция: Баланс номера/Переброс баланса/Отправлен по месту пополнения/");
-            },
-            mess112(){
-                Swal.fire("Оформляем Кейс: Баланс номера/Пополнение на терминированные и неактив-е номера/Переброс/");
-            },
-            mess113(){
-                Swal.fire("Оформляем Кейс: Баланс номера/Переброс баланса/Превышен лимит 500 сом/");
-            },
+    <!--new Vue({-->
+        <!--el: '#app',-->
+        <!--data: {-->
+            <!--message: 'Привет, Vue!',-->
+            <!--status: false,-->
+            <!--status2: false,-->
+            <!--status3: false,-->
+            <!--status4: false,-->
+            <!--status5: false,-->
+            <!--status6: false,-->
+            <!--status7: false,-->
+            <!--status8: false,-->
+            <!--status9: false,-->
+        <!--},-->
 
-            mess114(){
-                Swal.fire("Переброс невозможен Интеракция: Баланс номера/Переброс баланса/Израсходован баланс/");
-            },
-            mess115(){
-                Swal.fire("Оформляем Кейс: Баланс номера/Переброс баланса/Платеж не проходит/");
-            },
-            mess116(){
-                Swal.fire("Переброс невозможен Оформляем Интеракцию: Баланс номера/Переброс баланса/Недоступно по условиям/");
-            },
-            mess117(){
-                Swal.fire("Переброс невозможен Оформляем Интеракцию: Баланс номера/Переброс баланса/Недоступно по условиям/");
-            },
+        <!--methods:{-->
+            <!--mess(){-->
+                <!--Swal.fire("Действуем согласно процедуре по перебросу средств при поплнении на терминированный или неактивированный номер");-->
+            <!--},-->
 
-            mess118(){
-                Swal.fire("Для проведения идентификации уточните дату проведения платежа сумму платежа (с учетом комиссии) и если проходит идентификацию, то перебрасываем ДС. Интеракция: Баланс номера/Переброс баланса/Переброс совершен/");
-            },
+            <!--mess1(){-->
+                <!--Swal.fire("Действуем по процедуре отмены платежа Ошибся номером PostPaid Интеракция: Баланс номера/Переброс баланса/Недоступно по условиям/");-->
+            <!--},-->
+            <!--mess120(){-->
+                <!--Swal.fire("Отправляем по месту поплнения Интеракция: Баланс номера/Переброс баланса/Отправлен по месту пополнения/");-->
+            <!--},-->
+            <!--mess112(){-->
+                <!--Swal.fire("Оформляем Кейс: Баланс номера/Пополнение на терминированные и неактив-е номера/Переброс/");-->
+            <!--},-->
+            <!--mess113(){-->
+                <!--Swal.fire("Оформляем Кейс: Баланс номера/Переброс баланса/Превышен лимит 500 сом/");-->
+            <!--},-->
 
-            mess119(){
-                Swal.fire("Оформляем Кейс: Баланс номера/Переброс баланса/Платеж не проходит/");
-            },
+            <!--mess114(){-->
+                <!--Swal.fire("Переброс невозможен Интеракция: Баланс номера/Переброс баланса/Израсходован баланс/");-->
+            <!--},-->
+            <!--mess115(){-->
+                <!--Swal.fire("Оформляем Кейс: Баланс номера/Переброс баланса/Платеж не проходит/");-->
+            <!--},-->
+            <!--mess116(){-->
+                <!--Swal.fire("Переброс невозможен Оформляем Интеракцию: Баланс номера/Переброс баланса/Недоступно по условиям/");-->
+            <!--},-->
+            <!--mess117(){-->
+                <!--Swal.fire("Переброс невозможен Оформляем Интеракцию: Баланс номера/Переброс баланса/Недоступно по условиям/");-->
+            <!--},-->
 
-            mess2(){
-                this.status = true;
-            },
-            mess3(){
-                this.status2 = true;
-            },
-            mess4(){
-                this.status3 = true;
-                this.status4 = false;
-                this.status5 = false;
-                this.status6 = false;
-                this.status7 = false;
-                this.status8 = false;
-                this.status9 = false;
-            },
-            mess5(){
-                this.status4 = true;
-                this.status3 = false;
+            <!--mess118(){-->
+                <!--Swal.fire("Для проведения идентификации уточните дату проведения платежа сумму платежа (с учетом комиссии) и если проходит идентификацию, то перебрасываем ДС. Интеракция: Баланс номера/Переброс баланса/Переброс совершен/");-->
+            <!--},-->
 
-            },
-            mess6(){
-                this.status5 = true;
-            },
-            mess7(){
-                this.status6 = true;
-            },
-            mess8(){
-                this.status7 = true;
-            },
-            mess12(){
-                this.status8 = true;
-            },
-            mess14(){
-                this.status9 = true;
-            },
+            <!--mess119(){-->
+                <!--Swal.fire("Оформляем Кейс: Баланс номера/Переброс баланса/Платеж не проходит/");-->
+            <!--},-->
 
-        }
-    })
+            <!--mess2(){-->
+                <!--this.status = true;-->
+            <!--},-->
+            <!--mess3(){-->
+                <!--this.status2 = true;-->
+            <!--},-->
+            <!--mess4(){-->
+                <!--this.status3 = true;-->
+                <!--this.status4 = false;-->
+                <!--this.status5 = false;-->
+                <!--this.status6 = false;-->
+                <!--this.status7 = false;-->
+                <!--this.status8 = false;-->
+                <!--this.status9 = false;-->
+            <!--},-->
+            <!--mess5(){-->
+                <!--this.status4 = true;-->
+                <!--this.status3 = false;-->
 
-</script>
+            <!--},-->
+            <!--mess6(){-->
+                <!--this.status5 = true;-->
+            <!--},-->
+            <!--mess7(){-->
+                <!--this.status6 = true;-->
+            <!--},-->
+            <!--mess8(){-->
+                <!--this.status7 = true;-->
+            <!--},-->
+            <!--mess12(){-->
+                <!--this.status8 = true;-->
+            <!--},-->
+            <!--mess14(){-->
+                <!--this.status9 = true;-->
+            <!--},-->
+
+        <!--}-->
+    <!--})-->
+
+<!--</script>-->
 <!-- Подключаем Bootstrap JS -->
 <script src="/js/bootstrap.min.js"></script>
 <!-- Подключаем jQuery -->

@@ -19,6 +19,12 @@ public class MainController {
     public String main(Model model){
         return "main";
     }
+
+    @GetMapping ("/main")
+    public String main_(Model model){
+        return "/";
+    }
+
     @GetMapping("/map")
     public String map (@RequestParam (required = false) String filter, Model model) {
         Iterable <Message> messages = messageRepo.findAll();
