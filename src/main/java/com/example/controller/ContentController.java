@@ -2,6 +2,7 @@ package com.example.controller;
 
 import com.example.domain.Content;
 import com.example.repo.ContentRepo;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -43,14 +44,14 @@ public class ContentController {
         return "content_admin";
     }
 
-
+    @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping("/add_content")
     public String add_content (Map<String, Object> model) {
         Iterable <Content> contents = contentRepo.findAll();
         model.put("message",contents);
         return "add_content";
     }
-
+    @PreAuthorize("hasAuthority('ADMIN')")
     @PostMapping("add_content")
     public String add_content_new (@RequestParam String number, @RequestParam String type,
                                    @RequestParam String service, @RequestParam String provider,
@@ -61,7 +62,7 @@ public class ContentController {
         return "content_admin";
     }
 
-
+    @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping("/delete_content/{id}")
     public String delete_content(@PathVariable Integer id, Map<String, Object> model) {
         contentRepo.deleteById(id);

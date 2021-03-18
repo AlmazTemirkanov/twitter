@@ -3,6 +3,8 @@ package com.example.controller;
 import com.example.domain.Message;
 import com.example.repo.MessageRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -39,7 +41,7 @@ public class MainController {
         return "map";
     }
 
-
+    @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping("/admin")
     public String admin (@RequestParam (required = false) String filterAd, Model model) {
         Iterable <Message> messages = null;
@@ -69,7 +71,7 @@ public class MainController {
         return "game_two";
     }
 
-
+    @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping("/delete/{id}")
     public String delete(@PathVariable Integer id, Map<String, Object> model) {
         messageRepo.deleteById(id);
@@ -77,7 +79,7 @@ public class MainController {
     }
 
 
-
+    @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping("/add")
     public String add (Map<String, Object> model) {
         Iterable <Message> messages = messageRepo.findAll();
@@ -85,7 +87,7 @@ public class MainController {
         return "add";
     }
 
-
+    @PreAuthorize("hasAuthority('ADMIN')")
     @PostMapping ("/add_new")
     public String add_new(@RequestParam String area, @RequestParam String district,
                             @RequestParam String region, @RequestParam String selo,
@@ -96,7 +98,7 @@ public class MainController {
         messageRepo.save(message);
         return "admin";
     }
-
+    @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping("/edit/{id}")
     public String editId(@PathVariable Integer id, Model model ) {
         Iterable <Message> messages = messageRepo.findAllById(id);
@@ -112,7 +114,7 @@ public class MainController {
 
         return "edit";
     }
-
+    @PreAuthorize("hasAuthority('ADMIN')")
     @PostMapping ("/update")
     public String update (@RequestParam (value = "id", required = false) Integer id,
                           @ModelAttribute Message message){
@@ -145,9 +147,16 @@ public class MainController {
     public String perebros(Map<String, Object> model) {
         return "perebros";
     }
+
     @GetMapping("/perebros_ds")
     public String perebros_ds(Map<String, Object> model) {
-        return "/perebros_ds";
+        return "perebros_ds";
+    }
+
+
+    @GetMapping("/csi_cc")
+    public String csi_cc(Map<String, Object> model) {
+        return "csi_cc";
     }
 
 }

@@ -39,7 +39,36 @@ ul {
 	margin:0;
 	padding:0;
 }
+.tabs-nav {
+	display: flex;
+	justify-content: space-between;
+}
 
+
+.tab {
+	display: none;
+	padding: 20px;
+}
+
+.tab.tis-active {
+	display: block;
+}
+.tab .search-bar{
+	max-width:none;
+}
+.tab .content-button{
+	margin-left: 30px;
+}
+.form_2_head{
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+.form_2_head .search-bar{
+	max-width:550px;
+	padding: 0;
+
+}
 /*-------------------------*/
 /* MAIN CLASS TRANSITION FOR EFFECT HOVER*/
 /*-------------------------*/

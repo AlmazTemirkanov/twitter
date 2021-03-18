@@ -12,22 +12,23 @@
 
 <div class="mx-auto" style="width: 350px;">
     <div class="input-group input-group m-5">
+        <label for="username" >Форма для регистрации новых пользователей. Логин необходимо ввести от Windows. Пароль от 5 символов. Нажимаете "Сохранить" Новый пользователь автоматически будет добавлен. </label>
+
         <form class="px-4 py-3" action="/registration" method="post">
             <div class="form-group" >
-                <label for="username" >Логин для регистрации</label>
-                <input type="text" class="form-control"  name="username" placeholder="Login">
+                <label for="username" >Логин от Windows</label>
+                <input type="text" class="form-control"  name="username" placeholder="Логин от Windows">
                 <input type="hidden" name="_csrf" value="{{_csrf.token}}">
 
             </div>
             <div class="form-group">
-                <label for="password">Придумать пароль</label>
-                <input type="password" class="form-control" name="password" placeholder="Password">
+                <label for="password">Придумать пароль от 5 символов</label>
+                <input type="password" class="form-control" name="password" placeholder="Пароль от 5 символов">
                 <input type="hidden" name="_csrf" value="{{_csrf.token}}">
 
             </div>
             <button type="submit" class="btn btn-dark">Сохранить</button>
         </form>
-        <a class="nav-link ml-4" href="/user">Список пользователей</a>
     </div>
 </div>
 

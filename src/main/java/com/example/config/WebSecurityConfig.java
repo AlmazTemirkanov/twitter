@@ -23,7 +23,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/", "/registration", "/main", "/filter", "/prepaid", "/postpaid",
+                .antMatchers("/", "/main","/registration", "/main", "/filter", "/prepaid", "/postpaid",
                                         "/filter_postpaid", "/filter_prepaid", "/privet", "/office",
                                         "/sms", "/filter_sms", "/filter_pull", "/filter_crmpost", "/crmpost",
                                         "/pull", "/map", "/crm", "/internet", "/filter_crm","/calc", "/game_one",

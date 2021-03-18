@@ -3,6 +3,7 @@ package com.example.controller;
 import com.example.domain.SMS;
 import com.example.repo.SMSRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -40,14 +41,14 @@ public class SMSController {
         model.addAttribute("filter_sms_admin", filter_sms_admin);
         return "sms_admin";
     }
-
+    @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping("/add_sms")
     public String add_sms (Map<String, Object> model) {
         Iterable <SMS> sms = smsRepo.findAll();
         model.put("sms",sms);
         return "add_sms";
     }
-
+    @PreAuthorize("hasAuthority('ADMIN')")
     @PostMapping("add_sms")
     public String add_sms_new (@RequestParam String date, @RequestParam String topic,
                                @RequestParam String initiator, @RequestParam String text_topic,
@@ -57,7 +58,7 @@ public class SMSController {
         smsRepo.save(sms);
         return "sms_admin";
     }
-
+    @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping("/delete_sms/{id}")
     public String delete_sms(@PathVariable Integer id, Map<String, Object> model) {
         smsRepo.deleteById(id);

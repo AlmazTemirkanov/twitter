@@ -46,7 +46,7 @@ html {
 
 body {
   font-family: var(--body-font);
-  background-image: url(https://4kwallpapers.com/images/wallpapers/macos-big-sur-apple-layers-fluidic-colorful-dark-wwdc-2020-5120x2880-1432.jpg);
+  background-image: url(/img/milky-way-starry-sky-night-mountains-lake-reflection-cold-5k-1920x1080-287.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -570,11 +570,148 @@ body.light-mode:before {
   transition: 0.3s;
 }
 table{
-  color: var(--theme-color);
-  text-align: center;
+  margin-top: 40px;
+    color: var(--theme-color);
+    text-align: center;
 }
 table .midle{
-  width: 550px;
+    width: 550px;
+}
+table li {
+  list-style-type: none;
+  padding: 10px ;
+  margin: 0;
+  border-bottom:1px solid var(--theme-color) ;
+
+}
+td{
+  margin: 0;
+  padding: 0;
+}
+.daterangepicker table {
+  color: #14162b;
+}
+/* /// DECORATION CSS /// */
+.cont_select_center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -30px;
+  margin-left: -150px;
+}
+.cont_heg_50 {
+  position: absolute;
+  height: 50%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #fd7b52;
+}
+/* /// END DECORATION CSS /// */
+.icon_select_mate {
+  position: absolute;
+  top: 10px;
+  right: 2%;
+  font-size: 16px;
+  height: 22px;
+  transition: all 275ms;
+}
+.select_mate {
+  position: relative;
+  float: left;
+  min-width: 300px;
+  width: 300px;
+  font-family: 'Roboto';
+  color: #777;
+  font-weight: 300;
+  background-color: #fff;
+  box-shadow: 1px 2px 10px -2px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  transition: all 375ms ease-in-out;
+ /* Oculto el elemento select */
+}
+.select_mate select {
+  position: absolute;
+  overflow: hidden;
+  height: 0px;
+  opacity: 0;
+  z-index: -1;
+}
+.cont_list_select_mate {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+.cont_select_int {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 999;
+  overflow: hidden;
+  height: 0px;
+  width: 100%;
+  background-color: #fff;
+  padding: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  border-radius: 0px 0px 3px 3px;
+  box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.2);
+  transition: all 375ms ease-in-out;
+}
+.cont_select_int li {
+  position: relative;
+  float: left;
+  width: 96%;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #f5f5f5;
+  list-style-type: none;
+  padding: 10px 2%;
+  margin: 0px;
+  transition: all 275ms ease-in-out;
+  display: block;
+  cursor: pointer;
+}
+.cont_select_int li:last-child {
+  border-radius: 3px;
+  border-bottom: 0px;
+}
+.cont_select_int li:hover {
+  background-color: #eee;
+}
+.cont_select_int .active {
+  background-color: #eee;
+}
+/* etiqueta <p> con la opcion selecionada */
+.selecionado_opcion {
+  padding: 11px 2%;
+  width: 96%;
+  display: block;
+  margin: 0px;
+  cursor: pointer;
+}
+.extra{
+  color: red;
+}
+#csi_f2{
+  margin: 0;
+  padding: 0;
+}
+#csi_f2 li{
+  list-style-type:unset;
+  border-bottom:  1px solid #fff;
+}
+#csi_f2 li::marker{
+  border-bottom:  1px solid #fff;
+}
+
+
+#csi_f3{
+  padding: 0;
+  margin: 0;
+}
+#csi_f3 li{
+  list-style-type:unset;
+  border-bottom:  1px solid #fff;
 }
 .content-section ul li:hover {
   background-color: var(--theme-bg-color);
