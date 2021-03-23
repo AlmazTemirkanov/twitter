@@ -15,13 +15,7 @@
         width: 100%;
     }
 
-    /* .col1 {
-        width: 160px;
-    }
-
-    .coln {
-        width: 60px;
-    } */
+   
 </style>
 
 <body>
@@ -245,8 +239,16 @@
                 </div>
             </div>
             <div class="content-wrapper">
+              <div id="p_prldr"><div class="contpre"><span class="svg_anm"><svg version="1.1" id="L6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                        <rect fill="none" stroke="#fff" stroke-width="4" x="25" y="25" width="50" height="50">
+                       <animateTransform attributeName="transform" dur="0.5s" from="0 50 50" to="180 50 50" type="rotate" id="strokeBox" attributeType="XML" begin="rectBox.end"></animateTransform>
+                       </rect>
+                        <rect x="27" y="27" fill="#fff" width="46" height="50">
+                       <animate attributeName="height" dur="1.3s" attributeType="XML" from="50" to="0" id="rectBox" fill="freeze" begin="0s;strokeBox.end"></animate>
+                       </rect>
+                     </svg></span></div></div>
                 <div class=" ">
-                    <div class="forms tabs__content">
+                    <div class="forms tabs__content" id="forms">
                         <div class="tab tis-active content:'tab1';">
 
                             <div class="form__head search-bar">
@@ -425,6 +427,46 @@
         }
 
     });
+
+         // Store a copy of the fetch function
+        var _oldFetch = fetch; 
+
+// Create our new version of the fetch function
+window.fetch = function(){
+
+    // Create hooks
+    var fetchStart = new Event( 'fetchStart', { 'view': document, 'bubbles': true, 'cancelable': false } );
+    var fetchEnd = new Event( 'fetchEnd', { 'view': document, 'bubbles': true, 'cancelable': false } );
+
+    // Pass the supplied arguments to the real fetch function
+    var fetchCall = _oldFetch.apply(this, arguments);
+
+    // Trigger the fetchStart event
+    document.dispatchEvent(fetchStart);
+
+    fetchCall.then(function(){
+        // Trigger the fetchEnd event
+        document.dispatchEvent(fetchEnd);
+    }).catch(function(){
+        // Trigger the fetchEnd event
+        document.dispatchEvent(fetchEnd);
+    });
+
+    return fetchCall;
+};
+
+document.addEventListener('fetchStart', function() {
+    console.log("Show spinner");
+    document.getElementById('p_prldr').style.display = 'block'
+    document.getElementById('forms').style.display = 'none'
+
+});
+
+document.addEventListener('fetchEnd', function() {
+    console.log("Hide spinner");
+    document.getElementById('p_prldr').style.display = 'none'
+    document.getElementById('forms').style.display = 'block'
+});
 </script>
 
 </body>
