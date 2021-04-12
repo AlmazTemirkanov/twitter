@@ -28,10 +28,10 @@
 
 <body>
     <div class="dark-light">
-        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
-        </svg>
+         <div class="toggle-btn" id="_1st-toggle-btn">
+            <input type="checkbox" onchange="bar()" id="check">
+            <span></span>
+          </div>
     </div>
     <div class="app">
         <div class="header">
@@ -296,42 +296,11 @@
         </div>
         <div class="overlay-app"></div>
     </div>
-
-     <!--<script type="text/javascript">-->
-
-      <!---->
-
-        <!--&lt;!&ndash;function ContentSearch() {&ndash;&gt;-->
-            <!--&lt;!&ndash;var phrase = document.getElementById('ContentPhrase');&ndash;&gt;-->
-            <!--&lt;!&ndash;var table = document.getElementById('Content_id');&ndash;&gt;-->
-            <!--&lt;!&ndash;var regPhrase = new RegExp(phrase.value, 'i');&ndash;&gt;-->
-            <!--&lt;!&ndash;var flag = false;&ndash;&gt;-->
-            <!--&lt;!&ndash;for (var i = 1; i < table.rows.length; i++) {&ndash;&gt;-->
-                <!--&lt;!&ndash;flag = false;&ndash;&gt;-->
-                <!--&lt;!&ndash;for (var j = table.rows[i].cells.length - 1; j >= 0; j--) {&ndash;&gt;-->
-                    <!--&lt;!&ndash;flag = regPhrase.test(table.rows[i].cells[j].innerHTML);&ndash;&gt;-->
-                    <!--&lt;!&ndash;if (flag) break;&ndash;&gt;-->
-                <!--&lt;!&ndash;}&ndash;&gt;-->
-                <!--&lt;!&ndash;if (flag) {&ndash;&gt;-->
-                    <!--&lt;!&ndash;table.rows[i].style.display = "";&ndash;&gt;-->
-                <!--&lt;!&ndash;} else {&ndash;&gt;-->
-                    <!--&lt;!&ndash;table.rows[i].style.display = "none";&ndash;&gt;-->
-                <!--&lt;!&ndash;}&ndash;&gt;-->
-    <!---->
-            <!--&lt;!&ndash;}&ndash;&gt;-->
-        <!--&lt;!&ndash;}&ndash;&gt;-->
-    <!---->
-    <!---->
-    <!---->
-    <!--&lt;!&ndash;</script>&ndash;&gt;-->
     </div>
 
     <!-- Подключаем jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <!-- Подключаем Bootstrap JS -->
-    <!--<script src="/js/bootstrap.min.js"></script>-->
-    <!--<script src="/js/main.min.js"></script>-->
     <script src="/js/combined/map.js"></script>
 
 </body>
