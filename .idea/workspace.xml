@@ -7,13 +7,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ccc6667-4494-4afc-b5b8-aca8a4dfd60a" name="Default Changelist" comment="new front">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/map.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/map.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/combined/form1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/combined/form2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/combined/form3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/combined/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/combined/map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/content.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/content.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/crm.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/crm.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/crmpost.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/crmpost.mustache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/csi_cc.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/csi_cc.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/map.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/map.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/csi_cc.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/csi_cc.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sweatter-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/sweatter-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sweatter-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/sweatter-1.0-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fraud.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fraud.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/internet.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/internet.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/map.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/map.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/office.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/office.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/perebros.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/perebros.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/postpaid.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/postpaid.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/prepaid.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/prepaid.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/privet.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/privet.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/pull.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/pull.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/script.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/script.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sms.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sms.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/vip.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/vip.mustache" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -56,8 +72,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/csi_cc.mustache">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="232" column="77" selection-start-line="232" selection-start-column="77" selection-end-line="232" selection-end-column="77" />
+            <state relative-caret-position="323">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
@@ -189,7 +205,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
     <option name="y" value="2" />
     <option name="width" value="1316" />
@@ -566,7 +582,7 @@
       <workItem from="1616990533616" duration="584000" />
       <workItem from="1617080634427" duration="584000" />
       <workItem from="1617596079977" duration="1154000" />
-      <workItem from="1617969517213" duration="1243000" />
+      <workItem from="1617969517213" duration="1288000" />
     </task>
     <task id="LOCAL-00001" summary="change file">
       <created>1574339346808</created>
@@ -600,7 +616,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1089372000" />
+    <option name="totallyTimeSpent" value="1089417000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -612,9 +628,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="2" width="1316" height="773" extended-state="1" />
+    <frame x="-7" y="2" width="1316" height="773" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49656752" weight="0.2531746" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49656752" visible="true" weight="0.25238854" />
       <window_info id="Structure" order="1" sideWeight="0.50230414" side_tool="true" weight="0.2484127" />
       <window_info id="Web" order="2" sideWeight="0.5034325" side_tool="true" weight="0.21111111" />
       <window_info id="Designer" order="3" />
@@ -1060,8 +1077,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/csi_cc.mustache">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="232" column="77" selection-start-line="232" selection-start-column="77" selection-end-line="232" selection-end-column="77" />
+        <state relative-caret-position="323">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
