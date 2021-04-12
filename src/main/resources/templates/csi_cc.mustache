@@ -14,8 +14,9 @@
     table {
         width: 100%;
     }
-
-   
+   iframe{
+       background-color: #fff;
+   }
 </style>
 
 <body>
@@ -229,168 +230,9 @@
             </div>
         </div>
         <div class="main-container">
-            <div class="main-header tabs">
-                <!-- <a class="menu-link-main" href="#">All Apps</a> -->
-                <div class="header-menu tabs__nav tabs-nav">
-                    <a  class="tabs-nav__item is-active main-header-link" style="content:'tab1';" href="#first">CSI оператора</a>
-                    <a  class="tabs-nav__item main-header-link" style="content:'tab2';" href="#second">CSI по группе</a>
-                    <a  class="tabs-nav__item main-header-link" style="content:'tab3';" href="#third">Общий CSI </a>
-
-                </div>
-            </div>
-            <div class="content-wrapper">
-              <div id="p_prldr"><div class="contpre"><span class="svg_anm"><svg version="1.1" id="L6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-                        <rect fill="none" stroke="#fff" stroke-width="4" x="25" y="25" width="50" height="50">
-                       <animateTransform attributeName="transform" dur="0.5s" from="0 50 50" to="180 50 50" type="rotate" id="strokeBox" attributeType="XML" begin="rectBox.end"></animateTransform>
-                       </rect>
-                        <rect x="27" y="27" fill="#fff" width="46" height="50">
-                       <animate attributeName="height" dur="1.3s" attributeType="XML" from="50" to="0" id="rectBox" fill="freeze" begin="0s;strokeBox.end"></animate>
-                       </rect>
-                     </svg></span></div></div>
-                <div class=" ">
-                    <div class="forms tabs__content" id="forms">
-                        <div class="tab tis-active content:'tab1';">
-
-                            <div class="form__head search-bar">
-                                <input type="text"id="message" name="message" placeholder="Агент ID">
-                                <button type="submit" class="content-button status-button " id="button" onclick="today()">Сегодня</button>
-                                <button type="submit" class="content-button status-button" id="button2" onclick="week()">7 дней </button>
-                                <button type="submit" class="content-button status-button" id="button3" onclick="month()">30 дней</button>
-                                <button type="submit" class="content-button status-button" onclick="window.location.reload()">Обновить</button>
-                            </div>
-                            <table>
-                                <tr>
-                                    <th>Номер</th>
-                                    <th>CSI</th>
-                                    <th>Дата время</th>
-                                    <th>ФИО</th>
-                                    <th>Агент ID</th>
-                                    <th>Группа</th>
-                                </tr>
-
-                                <tr>
-                                    <td id="number"></td>
-                                    <td id="csi"></td>
-                                    <td id="date"></td>
-                                    <td id="name"></td>
-                                    <td id="agent_Id"></td>
-                                    <td id="group"></td>
-                                </tr>
-                            </table>
-                        </div>
-
-                        <!-- form2 -->
-                        <div class="tab content:'tab2'; ">
-                            <div class="form_2_head">
-                                <input type="text" name="daterange2" class="calendar" value="" />
-                                <div class="select_mate" data-mate-select="active">
-                                    <select name="" onchange="" onclick="return false;" id="select">
-                                        <option>ЮГ1</option>
-                                        <option>ЮГ2</option>
-                                        <option>ЮГ3</option>
-                                        <option>ОО1</option>
-                                        <option>OO2</option>
-                                        <option>ОО3</option>
-                                        <option>ОО4</option>
-                                        <option>ОВиКК</option>
-                                        <option>ГОПЗ</option>
-                                        <option>W-A</option>
-                                        <option>CFL</option>
-                                        <option>ЭОК</option>
-                                    </select>
-                                    <p class="selecionado_opcion" onclick="open_select(this)"></p><span onclick="open_select(this)"
-                                                                                                        class="icon_select_mate"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24"
-                                                                                                                                      xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
-                                                <path d="M0-.75h24v24H0z" fill="none" />
-                                            </svg></span>
-                                    <div class="cont_list_select_mate">
-                                        <ul class="cont_select_int"> </ul>
-                                    </div>
-                                </div>
-
-                                <div class="select_mate" data-mate-select="active">
-                                    <select name="" onchange="" onclick="return false;" id="time">
-                                        <option value="http://172.28.141.23:8282/api/v1/1team/">24 часа</option>
-                                        <option value="http://172.28.141.23:8282/api/v1/7team/">7 Дней</option>
-                                        <option value="http://172.28.141.23:8282/api/v1/30team/">30 Дней</option>
-                                    </select>
-                                    <p class="selecionado_opcion" onclick="open_select(this)"></p><span onclick="open_select(this)"
-                                                                                                        class="icon_select_mate"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24"
-                                                                                                                                      xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
-                                                <path d="M0-.75h24v24H0z" fill="none" />
-                                            </svg></span>
-                                    <div class="cont_list_select_mate">
-                                        <ul class="cont_select_int"> </ul>
-                                    </div>
-                                </div>
-                                <div class="submits search-bar">
-                                    <button type="button" class="content-button status-button " id="val-button_f2"
-                                            onclick="zapros()" class="">Найти</button>
-                                    <button type="submit" class="content-button status-button " onclick="window.location.reload()">Обновить</button>
-
-                                </div>
-                            </div>
-                            <table>
-                                <tr>
-                                    <th>CSI</th>
-                                    <th>Количество оценок</th>
-                                    <th>Агент ID</th>
-                                    <th>ФИО</th>
-                                    <th>Группа</th>
-                                    <th>Руководитель</th>
-                                </tr>
-
-                                <tr>
-                                    <td>
-                                        <ol id="csi_f2"></ol>
-                                    </td>
-                                    <td id="point_f2"></td>
-                                    <td id="agent_Id_f2"></td>
-                                    <td id="name_f2"></td>
-                                    <td id="group_f2"></td>
-                                    <td id="manag_f2"></td>
-                                </tr>
-                            </table>
-                        </div>
-
-                        <!-- form3 -->
-
-                        <div  class="tab content:'tab3';">
-                            <div class="form_2_head">
-                                <input type="text" name="daterange" value="" />
-                                <button type="submit"  class="content-button status-button " id="button_f3" onclick="today_csi()">Сегодня</button>
-                                <button type="submit"  class="content-button status-button " id="button2_f3" onclick="week_csi()">7 дней </button>
-                                <button type="submit"  class="content-button status-button " id="button3_f3" onclick="month_csi()">30 дней</button>
-                                <button type="submit"  class="content-button status-button " onclick="window.location.reload()">Обновить</button>
-                            </div>
-                            <table>
-                                <tr>
-                                    <th>CSI</th>
-                                    <th>Количество оценок</th>
-                                    <th>Группа</th>
-                                    <th>ФИО</th>
-
-                                </tr>
-
-                                <tr>
-                                    <td >
-                                        <ol id="csi_f3"></ol>
-                                    </td>
-                                    <td id="point_f3"></td>
-                                    <td id="group_f3"></td>
-                                    <td id="name_f3"></td>
-
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
+            <iframe src="http://172.28.141.23:8484" width="1570" height="1660" align="left">
+                    Ваш браузер не поддерживает плавающие фреймы!
+                 </iframe>
     </div>
     <div class="overlay-app"></div>
 </div>
@@ -409,65 +251,6 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 <!-- <script src="/js/main.min.js"></script> -->
 <script src="/js/combined/map.js"></script>
-<script>
-    jQuery(function($) {
-        showTab(location.hash || "first");
-        $(".tabs__nav a").click(function() {
-            var hash = this.getAttribute("href");
-            if (hash.substring(0, 1) === "#") {
-                hash = hash.substring(1);
-            }
-            location.hash = hash;
-            showTab(hash);
-            return false;
-        });
-
-        function showTab(hash) {
-
-        }
-
-    });
-
-         // Store a copy of the fetch function
-        var _oldFetch = fetch; 
-
-// Create our new version of the fetch function
-window.fetch = function(){
-
-    // Create hooks
-    var fetchStart = new Event( 'fetchStart', { 'view': document, 'bubbles': true, 'cancelable': false } );
-    var fetchEnd = new Event( 'fetchEnd', { 'view': document, 'bubbles': true, 'cancelable': false } );
-
-    // Pass the supplied arguments to the real fetch function
-    var fetchCall = _oldFetch.apply(this, arguments);
-
-    // Trigger the fetchStart event
-    document.dispatchEvent(fetchStart);
-
-    fetchCall.then(function(){
-        // Trigger the fetchEnd event
-        document.dispatchEvent(fetchEnd);
-    }).catch(function(){
-        // Trigger the fetchEnd event
-        document.dispatchEvent(fetchEnd);
-    });
-
-    return fetchCall;
-};
-
-document.addEventListener('fetchStart', function() {
-    console.log("Show spinner");
-    document.getElementById('p_prldr').style.display = 'block'
-    document.getElementById('forms').style.display = 'none'
-
-});
-
-document.addEventListener('fetchEnd', function() {
-    console.log("Hide spinner");
-    document.getElementById('p_prldr').style.display = 'none'
-    document.getElementById('forms').style.display = 'block'
-});
-</script>
 
 </body>
 
