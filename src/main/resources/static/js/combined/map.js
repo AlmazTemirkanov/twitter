@@ -48,29 +48,23 @@ $(function () {
      }
     });
    });
-   
-//    $(function () {
-//     $(".status-button:not(.open)").on("click", function (e) {
-//      $(".overlay-app").addClass("is-active");
-//     });
-//     $(".pop-up .close").click(function () {
-//      $(".overlay-app").removeClass("is-active");
-//     });
-//    });
-   
-//    $(".status-button:not(.open)").click(function () {
-//     $(".pop-up").addClass("visible");
-//    });
-   
-//    $(".pop-up .close").click(function () {
-//     $(".pop-up").removeClass("visible");
-//    });
-   
-   const toggleButton = document.querySelector('.dark-light');
-   
-   toggleButton.addEventListener('click', () => {
-     document.body.classList.toggle('light-mode');
-   });
+function bar() {
+    const toggleButton = document.querySelector('#check');
+    if (toggleButton.checked) {
+        document.body.classList.add('light-mode');
+        localStorage.setItem('dark', "true");
+    } else {
+        document.body.classList.remove('light-mode');
+        localStorage.setItem('dark', "false");
+    }
+
+
+}
+if (localStorage.getItem('dark') == "true") {
+    document.body.classList.add('light-mode');
+} else if (localStorage.getItem('dark') == "false") {
+    document.body.classList.remove('light-mode');
+}
 
    let tab = function () {
     let tabNav = document.querySelectorAll('.tabs-nav__item'),
@@ -100,7 +94,3 @@ $(function () {
 
 
 tab();
-// var call = document.getElementById('button');
-// if(call.click = true){
-//     call.classList.add('open')
-// }

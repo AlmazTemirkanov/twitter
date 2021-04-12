@@ -15,21 +15,17 @@
         width: 100%;
     }
 
-    /* .col1 {
-        width: 160px;
+    iframe{
+        background-color: #fff;
     }
-
-    .coln {
-        width: 60px;
-    } */
 </style>
 
 <body>
 <div class="dark-light">
-    <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"
-         stroke-linejoin="round">
-        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
-    </svg>
+      <div class="toggle-btn" id="_1st-toggle-btn">
+            <input type="checkbox" onchange="bar()" id="check">
+            <span></span>
+          </div>
 </div>
 <div class="app">
     <div class="header">
@@ -246,35 +242,13 @@
 <!-- Подключаем jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<!-- Подключаем Bootstrap JS -->
-<script src="/js/combined/form1.js"></script>
-<script src="/js/combined/form2.js"></script>
-<script src="/js/combined/form3.js"></script>
 <script src="/js/combined/calendar_kdg_utf8.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 <!-- <script src="/js/main.min.js"></script> -->
 <script src="/js/combined/map.js"></script>
-<script>
-    jQuery(function($) {
-        showTab(location.hash || "first");
-        $(".tabs__nav a").click(function() {
-            var hash = this.getAttribute("href");
-            if (hash.substring(0, 1) === "#") {
-                hash = hash.substring(1);
-            }
-            location.hash = hash;
-            showTab(hash);
-            return false;
-        });
 
-        function showTab(hash) {
-
-        }
-
-    });
-</script>
 
 </body>
 
