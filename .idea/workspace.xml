@@ -7,31 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ccc6667-4494-4afc-b5b8-aca8a4dfd60a" name="Default Changelist" comment="new front">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/map.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/map.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/combined/form1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/combined/form2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/combined/form3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/combined/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/combined/map.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/content.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/content.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/crm.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/crm.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/crmpost.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/crmpost.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/csi_cc.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/csi_cc.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fraud.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fraud.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/internet.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/internet.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/main.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/map.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/map.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/office.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/office.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/perebros.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/perebros.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/postpaid.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/postpaid.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/prepaid.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/prepaid.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/privet.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/privet.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/pull.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/pull.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/script.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/script.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/sms.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/sms.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/vip.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/vip.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sweatter-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/sweatter-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sweatter-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/sweatter-1.0-SNAPSHOT.jar.original" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -61,7 +38,7 @@
     </favorites_list>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -111,7 +88,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/templates/script.mustache.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/test.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/domain/CRM.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application-local.properties" />
@@ -162,6 +138,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/controller/RegistrationController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/add_prepaid.mustache" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -188,7 +165,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-7" />
     <option name="y" value="2" />
     <option name="width" value="1316" />
@@ -202,8 +179,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -211,28 +186,12 @@
               <item name="twitter" type="b2602c69:ProjectViewProjectNode" />
               <item name="twitter" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="twitter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="twitter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="twitter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="twitter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="twitter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="twitter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -513,6 +472,7 @@
       <workItem from="1615864353821" duration="13029000" />
       <workItem from="1615957812798" duration="10397000" />
       <workItem from="1615976340819" duration="4800000" />
+      <workItem from="1618286111671" duration="280000" />
     </task>
     <task id="LOCAL-00001" summary="change file">
       <created>1574339346808</created>
@@ -546,7 +506,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1082370000" />
+    <option name="totallyTimeSpent" value="1082816000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -558,9 +518,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="2" width="1316" height="773" extended-state="1" />
+    <frame x="-8" y="-8" width="1320" height="784" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49656752" visible="true" weight="0.25238854" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49656752" visible="true" weight="0.25555557" />
       <window_info id="Structure" order="1" sideWeight="0.50230414" side_tool="true" weight="0.2484127" />
       <window_info id="Web" order="2" sideWeight="0.5034325" side_tool="true" weight="0.21111111" />
       <window_info id="Designer" order="3" />
@@ -568,13 +528,13 @@
       <window_info id="Favorites" order="5" sideWeight="0.50230414" side_tool="true" weight="0.2484127" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49920508" weight="0.32872504" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.334375" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.334375" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4984127" weight="0.2764977" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49920508" weight="0.32872504" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" weight="0.32872504" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32872504" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32258064" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32872504" />
       <window_info anchor="bottom" id="Spring" order="10" sideWeight="0.49920508" weight="0.32872504" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32872504" />
@@ -679,13 +639,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="new front" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="3" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/repo/UserRepo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -944,13 +897,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/combined/form2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="42" column="65" selection-start-line="42" selection-start-column="60" selection-end-line="42" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/combined/form2.js" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/controller/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -1010,6 +957,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="27" selection-start-column="27" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
         </state>
       </provider>
     </entry>
