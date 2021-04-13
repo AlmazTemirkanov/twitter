@@ -184,7 +184,9 @@ body.light-mode:before {
     display: none;
   }
 }
-
+.selo{
+  color: var(--theme-color);
+}
 .menu-circle {
   width: 15px;
   height: 15px;
