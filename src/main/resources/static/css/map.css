@@ -922,6 +922,35 @@ button:focus{
 .checkbox-wrapper + .checkbox-wrapper {
   margin: 20px 0 40px;
 }
+#p_prldr{
+  display: none;
+position: absolute;
+width: 100%;
+height: 100%;
+z-index: 30;}
+
+.contpre small{font-size:25px;}
+
+.contpre{
+width: 250px;
+height: 100px;
+position: absolute;
+left: 42%;top: 45%;
+margin-left:-125px;
+margin-top:-75px;
+color:var(--theme-color);;
+font-size:40px;
+letter-spacing:-2px;
+text-align:center;
+line-height:35px;}
+
+#p_prldr .svg_anm {
+position: absolute;
+width: 91px;
+height: 91px;
+background: url(images/oval.svg) center center no-repeat;
+background-size:41px;    
+margin: -16px 0 0 -16px;}
 
 .checkbox {
   display: none;
