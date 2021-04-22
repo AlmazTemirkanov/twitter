@@ -12,7 +12,8 @@
 
 <div class="mx-auto" style="width: 350px;">
     <div class="input-group input-group m-5">
-        <label for="username" >Форма для регистрации новых пользователей. Логин необходимо ввести от Windows. Пароль от 5 символов. Нажимаете "Сохранить" Новый пользователь автоматически будет добавлен. </label>
+        <label for="username" >Форма для регистрации новых пользователей. Логин необходимо ввести от Windows.
+            Пароль от 5 символов. Нажимаете "Сохранить" Новый пользователь автоматически будет добавлен. </label>
 
         <form class="px-4 py-3" action="/registration" method="post">
             <div class="form-group" >
@@ -25,8 +26,24 @@
                 <label for="password">Придумать пароль от 5 символов</label>
                 <input type="password" class="form-control" name="password" placeholder="Пароль от 5 символов">
                 <input type="hidden" name="_csrf" value="{{_csrf.token}}">
-
             </div>
+            <!--<div>-->
+                <!--<label for="password">Назначить роль. <br>Для КЦ USER для ОПиО CSI</label>-->
+                <!--<input type="text" class="form-control" name="Roles" placeholder="Роль">-->
+                <!--<input type="hidden" name="_csrf" value="{{_csrf.token}}">-->
+            <!--</div>-->
+
+            <div class="form-group">
+                <label for="inputState">Выбрать роль</label>
+                <select id="inputState" name="Roles" class="form-control">
+                    <option selected>...</option>
+                    <option>CC_CSI</option>
+                    <option>OPIO_CSI</option>
+                    <input type="hidden" name="_csrf" value="{{_csrf.token}}">
+                </select>
+            </div>
+
+            <br>
             <button type="submit" class="btn btn-dark">Сохранить</button>
         </form>
     </div>

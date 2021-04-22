@@ -153,12 +153,18 @@ public class MainController {
         return "perebros_ds";
     }
 
-
+    @PreAuthorize("hasAuthority('CC_CSI') or hasAuthority('ADMIN')")
     @GetMapping("/csi_cc")
     public String csi_cc(Map<String, Object> model) {
         return "csi_cc";
     }
 
+    @PreAuthorize("hasAuthority('OPIO_CSI') or hasAuthority('ADMIN')")
+
+    @GetMapping("/csi_opio")
+    public String csi_opio(Map<String, Object> model) {
+        return "csi_opio";
+    }
 }
 
 
