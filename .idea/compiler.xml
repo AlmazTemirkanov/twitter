@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="beenavigator" />
+        <module name="sweatter" />
         <module name="twitter" />
       </profile>
     </annotationProcessing>
@@ -15,6 +16,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="beenavigator" options="-parameters" />
+      <module name="sweatter" options="-parameters" />
       <module name="twitter" options="-parameters" />
     </option>
   </component>
