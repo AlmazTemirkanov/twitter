@@ -26,7 +26,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/", "/main","/registration", "/main", "/filter", "/prepaid", "/postpaid",
                                         "/filter_postpaid", "/filter_prepaid", "/privet", "/office",
                                         "/sms", "/filter_sms", "/filter_pull", "/filter_crmpost", "/crmpost",
-                                        "/pull", "/map", "/crm", "/internet", "/filter_crm","/calc", "/game_one",
+                                        "/pull", "/map", "/crm", "/internet", "/not-internet", "/filter_crm","/calc", "/game_one",
                         "/game_two", "/script",
                         "/css/**",
                         "/js/**",

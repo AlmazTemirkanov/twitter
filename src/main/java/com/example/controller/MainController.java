@@ -165,6 +165,11 @@ public class MainController {
     public String csi_opio(Map<String, Object> model) {
         return "csi_opio";
     }
+
+    @GetMapping("/not-internet")
+    public String not_internet (Map<String, Object> model) {
+        return "not-internet";
+    }
 }
 
 
