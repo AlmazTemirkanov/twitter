@@ -6,11 +6,20 @@
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link href='/css/apis.css' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link href="/css/style.css" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <link href="/css/map.css" rel='stylesheet' type='text/css'>
 </head>
+<style>
+    table {
+        width: 100%;
+    }
+    iframe{
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+    }
+</style>
 
 <body>
 <div class="dark-light">
@@ -23,7 +32,7 @@
     <div class="header">
 
         <div class="header-menu">
-            <a href="/main" class="menu-link is-active">BeeNavigator</a>
+            <a href="main" class="menu-link is-active">BeeNavigator</a>
         </div>
         <div class="header-profile">
             <div class="notification">
@@ -187,7 +196,8 @@
                         </svg>
                         SMS
                     </a>
-                    <a href="/mybeeline">
+
+                     <a href="/mybeeline">
                         <svg viewBox="0 0 512 512" fill="currentColor">
                             <path
                                     d="M0 331v112.295a14.996 14.996 0 007.559 13.023L106 512V391L0 331zM136 391v121l105-60V331zM271 331v121l105 60V391zM406 391v121l98.441-55.682A14.995 14.995 0 00512 443.296V331l-106 60zM391 241l-115.754 57.876L391 365.026l116.754-66.15zM262.709 1.583a15.006 15.006 0 00-13.418 0L140.246 57.876 256 124.026l115.754-66.151L262.709 1.583zM136 90v124.955l105 52.5V150zM121 241L4.246 298.876 121 365.026l115.754-66.15zM271 150v117.455l105-52.5V90z" />
@@ -262,196 +272,27 @@
 
         </div>
         <div class="main-container">
-            <div class="main-header">
-                <h4 style="color: var(--theme-color);"> Нет выхода в интернет</h4>
 
-            </div>
-            <div class="content-wrapper">
-                <div class="content-section">
-                    <div id="app">
+            <iframe src="http://172.28.141.23:8383/mybeeline" align="left">
 
-                        <div class="">
-                            <h4>Скрипт "Нет выхода в интернет"</h4>
-                            <br>
-
-                            <p class="font-weight-bold">Уточните номер, на котором наблюдается проблема.</p>
-                            <button @click="mess1()" class="content-button status-button open">	С которого звонит </button>
-                            <button @click="mess1()" class="content-button status-button open">	С другого номера </button>
-
-                            <br>
-                            <br>
-
-                            <div v-show ="status1">
-                                <p class="font-weight-bold">Есть покрытие в биинавигаторе по местоположению абонента?</p>
-                                <button @click="moi1()" class="content-button status-button open">Нет </button>
-                                <button @click="moi2()" class="content-button status-button open">Только 2Г или слабый сигнал</button>
-                                <button @click="moi3()" class="content-button status-button open">Да, есть </button>
-                            </div>
-
-
-                            <br>
-                            <div v-show ="status2">
-                                <p class="font-weight-bold">Проверьте есть ли пакеты для выхода в интернет? </p>
-                                <button @click="moi6()" class="content-button status-button open">Нет</button>
-                                <button @click="moi7()" class="content-button status-button open">Да</button>
-                            </div>
-                            <br>
-
-                            <div v-show ="status3">
-                                <p class="font-weight-bold">Проверьте наличие "Актуального инцидента", "Актуальной проблемы", "Работы на БС" в Биинфо по местонахождению Клиента?</p>
-                                <button @click="moi4()" class="content-button status-button open">Есть проблемы</button>
-                                <button @click="moi5()" class="content-button status-button open">Нет проблем</button>
-                            </div>
-                            <br>
-                            <div v-show ="status4">
-                                <p class="font-weight-bold">Нет ли запретов для выхода в интернет. Проверить в CSRTB и в карем.</p>
-                                <button @click="moi8()" class="content-button status-button open">Не знаю, как проверять </button>
-                                <button @click="moi9()" class="content-button status-button open">Да есть запрет</button>
-                                <button @click="moi10()" class="content-button status-button open">Нет запретов</button>
-                            </div>
-                            <br>
-                            <div v-show ="status5">
-                                <p class="font-weight-bold">Уточните, модель аппарата и поддерживаемость нашей сети в Smartcare и в телефоне рядом со значком антенны какая пиктограмма отображается, есть ли также стрелки, направленные вверх и вниз?</p>
-                                <button @click="moi11()" class="content-button status-button open">Пиктограммы нет, но стрелки есть</button>
-                                <button @click="moi12()" class="content-button status-button open">Пиктограмма Е, стрелки есть</button>
-                                <button @click="moi13()" class="content-button status-button open">Нет ни пиктограммы, ни стрелок</button>
-                                <button @click="moi14()" class="content-button status-button open">3G/4G/E/H/LTE стрелки есть</button>
-                            </div>
-                            <br>
-                            <div v-show ="status6">
-                                <p class="font-weight-bold">Уточните у абонента, интернет перестал работать после отключения э.э?</p>
-                                <button @click="moi16()"class="content-button status-button open">Да</button>
-                                <button @click="moi0()" class="content-button status-button open">Нет, с этим не связано</button>
-                            </div>
-                            <br>
-                            <div v-show ="status7">
-                                <p class="font-weight-bold">Интернет не работает только у абонента или у всех поблизости не работает? Был ли ранее оформлен кейс в SO? </p>
-                                <button @click="moi17()"class="content-button status-button open">Только у абонента</button>
-                                <button @click="moi18()" class="content-button status-button open">Проблема наблюдается у всех, оформлен кейс</button>
-                                <button @click="moi19()" class="content-button status-button open">Проблема наблюдается у всех, кейс не оформлен</button>
-                            </div>
-
-
-
-
-                            <br>
-
-                            <button onClick="window.location.reload();"
-                                    class="content-button status-button">Обновить</button>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+                Ваш браузер не поддерживает плавающие фреймы!
+            </iframe>
         </div>
+        <div class="overlay-app"></div>
     </div>
-    <div class="overlay-app"></div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-<script type="text/javascript">
-
-                new Vue({
-                    el: '#app',
-                    data: {
-                        message: 'Привет, Vue!',
-                        status1: false,
-                        status2: false,
-                        status3: false,
-                        status4: false,
-                        status5: false,
-                        status6: false,
-                        status7: false,
-
-
-                    },
-
-                    methods:{
-
-                        moi1(){
-                            Swal.fire("При отсутствии села в карте по всем названиям, необходимо принять Кейс по шаблону «Интернет-> Низкая скорость. Почему? -> Отсутствие/расхождение инфо в биинавигатор-> соответствующая область»");
-                        },
-                        moi2(){
-                            Swal.fire("Кейс принимать не нужно. До установки БС ситуация не наладится. Нужно проверить, планируется ли установка БС и сообщить Клиенту. Если планируется – значит сектор загружен и планируется установка БС. Сообщить об этом и попросить подождать. Если не планируется – ответить по шаблону и принять предложение на установку БС");
-                        },
-                        moi4(){
-                            Swal.fire("Проблема связана с актуальной проблемой, по которому ведутся работы со стороны технических специалистов. Просьба ожидать решения проблемы.");
-                        },
-                        moi6(){
-                            Swal.fire("Посоветуйте оплатить АП или предложите дополнительный пакет для интернета.");
-                        },
-                        moi8(){
-                            Swal.fire("Если не знаете, как проверять блокировку, то мы подготовили мануал: https://beeinfo/index.php?option=com_content&view=article&id=12505&Itemid=874");
-
-                        },
-                        moi9(){
-                            Swal.fire("Необходимо создать кейс по тематике: Интернет - Нет выхода в интернет - из-за номера – Блокирован");
-                        },
-                        moi11(){
-                            Swal.fire("Помогите Клиенту в настройках выбрать сеть 3G/4G. Настройки -> Режим сети/Тип сети -> Автоматический режим/ Предпочтительно 4G/3G. Если в телефоне Клиента нет таких разделов, уточните в каком слоте сим-карта, если во втором, то порекомендуйте переставить сим-карту в первый слот. Если сим-карта в первом слоте, то скорее всего аппарат абонента не поддерживает 4G/3G, порекомендуйте переставить сим-карту в другой аппарат");
-                        },
-                        moi12(){
-                            Swal.fire("Помогите Клиенту в настройках выбрать сеть 3G/4G. Настройки -> Режим сети/Тип сети -> Автоматический режим/ Предпочтительно 4G/3G. Если в телефоне Клиента нет таких разделов, уточните в каком слоте сим-карта, если во втором, то порекомендуйте переставить сим-карту в первый слот. Если сим-карта в первом слоте, то скорее всего аппарат абонента не поддерживает 4G/3G, порекомендуйте переставить сим-карту в другой аппарат");
-                        },
-                        moi13(){
-                            Swal.fire("Уточните, включена ли в телефоне передача данных, если да, то обработайте обращение по тематике \"Нет выхода в интернет\"");
-                        },
-                        moi15(){
-                            Swal.fire("Уточните, включена ли на аппарате передача данных, если да, то обработайте обращение по тематике «Нет выхода в интернет»");
-                        },
-                        moi16(){
-                            Swal.fire("Необходимо создать кейс по тематике: Интернет-> Нет выхода в интернет/Низкая скорость-> Отключение электроэнергии-> Область");
-                        },
-                        moi17(){
-                            Swal.fire("Необходимо посоветовать переставить сим-карту на другой аппарат, или восстановить сим.");
-                        },
-                        moi18(){
-                            Swal.fire("Порекомендуйте ожидать решения заявки");
-                        },
-                        moi19(){
-                            Swal.fire("Необходимо принять кейс по тематике: Интернет/Нет выхода в интернет/Оформлен ТТ/ Соответствующая область");
-                        },
-
-
-
-
-
-
-                        mess1(){
-                            this.status1 = true;
-                        },
-                        moi3(){
-                            this.status2 = true;
-                        },
-                        moi7(){
-                            this.status3 = true;
-                        },
-                        moi5(){
-                            this.status4 = true;
-                        },
-                        moi10(){
-                            this.status5 = true;
-                        },
-                        moi14(){
-                            this.status6 = true;
-                        },
-                        moi0(){
-                            this.status7 = true;
-                        },
-
-
-
-
-                    }
-                })
-
-            </script>
-
-</body>
 <!-- Подключаем jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+<script src="/js/combined/calendar_kdg_utf8.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<!-- <script src="/js/main.min.js"></script> -->
 <script src="/js/combined/map.js"></script>
+
+
+</body>
 
 </html>

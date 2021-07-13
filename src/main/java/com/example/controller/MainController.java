@@ -170,6 +170,10 @@ public class MainController {
     public String not_internet (Map<String, Object> model) {
         return "not-internet";
     }
+    @GetMapping("/mybeeline")
+    public String mybeeline(Map<String, Object> model) {
+        return "mybeeline";
+    }
 }
 
 
